@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c42nmympja2s7"]
+
+[ext_resource type="Script" uid="uid://dpjhmty1xr3jl" path="res://scripts/pickable.gd" id="1_47qne"]
+
+[node name="Pickable" type="Area2D" unique_id=141324948]
+script = ExtResource("1_47qne")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=583126960]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
