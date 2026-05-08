@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://2o38ba43vbq4"]
+
+[ext_resource type="Script" uid="uid://eatac1g7dtxf" path="res://test_ball.gd" id="1_8uh7m"]
+[ext_resource type="PackedScene" uid="uid://c42nmympja2s7" path="res://components/pickable.tscn" id="1_37kl0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8uh7m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6uqi0"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8uh7m"]
+
+[node name="Test" type="Node2D" unique_id=95700796]
+
+[node name="TestRect" type="RigidBody2D" parent="." unique_id=1998466542]
+position = Vector2(156, 78)
+script = ExtResource("1_8uh7m")
+
+[node name="Pickable" parent="TestRect" unique_id=141324948 instance=ExtResource("1_37kl0")]
+
+[node name="CollisionShape2D" parent="TestRect/Pickable" index="0" unique_id=583126960]
+shape = SubResource("RectangleShape2D_8uh7m")
+
+[node name="ColorRect" type="ColorRect" parent="TestRect" unique_id=583154758]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestRect" unique_id=1245071252]
+shape = SubResource("RectangleShape2D_6uqi0")
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1561995141]
+position = Vector2(163, 180)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=470210934]
+shape = SubResource("WorldBoundaryShape2D_8uh7m")
+
+[editable path="TestRect/Pickable"]

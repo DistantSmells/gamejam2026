@@ -1,0 +1,152 @@
+[gd_scene format=3 uid="uid://2o38ba43vbq4"]
+
+[ext_resource type="PackedScene" uid="uid://8sovakvkisrc" path="res://components/mouse_physics_object.tscn" id="1_b8yjk"]
+[ext_resource type="Shader" uid="uid://bjkg0y4hmr701" path="res://assets/Outline.gdshader" id="2_wwcu3"]
+[ext_resource type="Texture2D" uid="uid://dt45uvoj1x4l3" path="res://assets/icon.svg" id="3_spkmw"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8uh7m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bl13t"]
+size = Vector2(50, 50)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iyx0m"]
+resource_local_to_scene = true
+shader = ExtResource("2_wwcu3")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/width = 0.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+shader_parameter/number_of_images = Vector2(1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iyx0m"]
+size = Vector2(50, 50)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_74lek"]
+resource_local_to_scene = true
+shader = ExtResource("2_wwcu3")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/width = 0.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+shader_parameter/number_of_images = Vector2(1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j5jx5"]
+resource_local_to_scene = true
+shader = ExtResource("2_wwcu3")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/width = 0.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+shader_parameter/number_of_images = Vector2(1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lpvoh"]
+resource_local_to_scene = true
+shader = ExtResource("2_wwcu3")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/width = 0.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+shader_parameter/number_of_images = Vector2(1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_at5dv"]
+resource_local_to_scene = true
+shader = ExtResource("2_wwcu3")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/width = 0.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+shader_parameter/number_of_images = Vector2(1, 1)
+
+[node name="PhysicsExampleScene" type="Node2D" unique_id=95700796]
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1561995141]
+position = Vector2(163, 180)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=470210934]
+shape = SubResource("WorldBoundaryShape2D_8uh7m")
+
+[node name="MousePhysicsObject" parent="." unique_id=1177728474 instance=ExtResource("1_b8yjk")]
+position = Vector2(171, 89)
+
+[node name="CollisionShape2D" parent="MousePhysicsObject" index="0" unique_id=208919183]
+shape = SubResource("RectangleShape2D_bl13t")
+
+[node name="Sprite2D" parent="MousePhysicsObject" index="1" unique_id=420557678]
+material = SubResource("ShaderMaterial_iyx0m")
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_spkmw")
+
+[node name="CollisionShape2D" parent="MousePhysicsObject/Pickable" parent_id_path=PackedInt32Array(1177728474, 141324948) index="0" unique_id=583126960]
+shape = SubResource("RectangleShape2D_iyx0m")
+
+[node name="MousePhysicsObject2" parent="." unique_id=1173900958 instance=ExtResource("1_b8yjk")]
+position = Vector2(100, 44)
+
+[node name="CollisionShape2D" parent="MousePhysicsObject2" index="0" unique_id=208919183]
+shape = SubResource("RectangleShape2D_bl13t")
+
+[node name="Sprite2D" parent="MousePhysicsObject2" index="1" unique_id=420557678]
+material = SubResource("ShaderMaterial_74lek")
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_spkmw")
+
+[node name="CollisionShape2D" parent="MousePhysicsObject2/Pickable" parent_id_path=PackedInt32Array(1173900958, 141324948) index="0" unique_id=583126960]
+shape = SubResource("RectangleShape2D_iyx0m")
+
+[node name="MousePhysicsObject3" parent="." unique_id=1375001746 instance=ExtResource("1_b8yjk")]
+position = Vector2(182, 24)
+
+[node name="CollisionShape2D" parent="MousePhysicsObject3" index="0" unique_id=208919183]
+shape = SubResource("RectangleShape2D_bl13t")
+
+[node name="Sprite2D" parent="MousePhysicsObject3" index="1" unique_id=420557678]
+material = SubResource("ShaderMaterial_j5jx5")
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_spkmw")
+
+[node name="CollisionShape2D" parent="MousePhysicsObject3/Pickable" parent_id_path=PackedInt32Array(1375001746, 141324948) index="0" unique_id=583126960]
+shape = SubResource("RectangleShape2D_iyx0m")
+
+[node name="MousePhysicsObject4" parent="." unique_id=991819053 instance=ExtResource("1_b8yjk")]
+position = Vector2(122, -51)
+
+[node name="CollisionShape2D" parent="MousePhysicsObject4" index="0" unique_id=208919183]
+shape = SubResource("RectangleShape2D_bl13t")
+
+[node name="Sprite2D" parent="MousePhysicsObject4" index="1" unique_id=420557678]
+material = SubResource("ShaderMaterial_lpvoh")
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_spkmw")
+
+[node name="CollisionShape2D" parent="MousePhysicsObject4/Pickable" parent_id_path=PackedInt32Array(991819053, 141324948) index="0" unique_id=583126960]
+shape = SubResource("RectangleShape2D_iyx0m")
+
+[node name="MousePhysicsObject5" parent="." unique_id=231382711 instance=ExtResource("1_b8yjk")]
+position = Vector2(146, -132)
+
+[node name="CollisionShape2D" parent="MousePhysicsObject5" index="0" unique_id=208919183]
+shape = SubResource("RectangleShape2D_bl13t")
+
+[node name="Sprite2D" parent="MousePhysicsObject5" index="1" unique_id=420557678]
+material = SubResource("ShaderMaterial_at5dv")
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_spkmw")
+
+[node name="CollisionShape2D" parent="MousePhysicsObject5/Pickable" parent_id_path=PackedInt32Array(231382711, 141324948) index="0" unique_id=583126960]
+shape = SubResource("RectangleShape2D_iyx0m")
+
+[editable path="MousePhysicsObject"]
+[editable path="MousePhysicsObject/Pickable"]
+[editable path="MousePhysicsObject2"]
+[editable path="MousePhysicsObject2/Pickable"]
+[editable path="MousePhysicsObject3"]
+[editable path="MousePhysicsObject3/Pickable"]
+[editable path="MousePhysicsObject4"]
+[editable path="MousePhysicsObject4/Pickable"]
+[editable path="MousePhysicsObject5"]
+[editable path="MousePhysicsObject5/Pickable"]

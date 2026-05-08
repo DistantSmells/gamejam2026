@@ -7,5 +7,5 @@ script = ExtResource("1_47qne")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=583126960]
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
-[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
