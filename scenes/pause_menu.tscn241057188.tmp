@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://fx80yedrppsc"]
+
+[ext_resource type="Script" uid="uid://buslsymc6fjje" path="res://scripts/pause_menu.gd" id="1_hdmo1"]
+[ext_resource type="Shader" uid="uid://h0okc2471w7p" path="res://assets/shaders/blur.gdshader" id="2_nwcfo"]
+[ext_resource type="FontFile" uid="uid://j7fyf61roql4" path="res://assets/fonts/lorekerper/LoreKerper.ttf" id="3_kukqi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_05uyy"]
+resource_local_to_scene = true
+shader = ExtResource("2_nwcfo")
+shader_parameter/lod = 2.000000095
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hdmo1"]
+bg_color = Color(0.3054463, 0.3054462, 0.3054462, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 10
+
+[node name="pause_menu" type="Control" unique_id=1299909858]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_hdmo1")
+
+[node name="BlurOverlay" type="ColorRect" parent="." unique_id=90873494]
+material = SubResource("ShaderMaterial_05uyy")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=307861306]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer" unique_id=1262923447]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hdmo1")
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/PanelContainer" unique_id=1820066292]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer" unique_id=755632976]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1624754478]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_kukqi")
+text = "Game Paused"
+
+[node name="ResumeButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=878469028]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_kukqi")
+text = "Resume"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=612328607]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_kukqi")
+text = "Quit"
+
+[connection signal="pressed" from="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

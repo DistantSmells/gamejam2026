@@ -3,13 +3,14 @@
 [ext_resource type="PackedScene" uid="uid://8sovakvkisrc" path="res://components/mouse_physics_object.tscn" id="1_b8yjk"]
 [ext_resource type="Shader" uid="uid://bjkg0y4hmr701" path="res://assets/Outline.gdshader" id="2_wwcu3"]
 [ext_resource type="Texture2D" uid="uid://dt45uvoj1x4l3" path="res://assets/icon.svg" id="3_spkmw"]
+[ext_resource type="PackedScene" uid="uid://fx80yedrppsc" path="res://scenes/pause_menu.tscn" id="4_wwcu3"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8uh7m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bl13t"]
 size = Vector2(50, 50)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_iyx0m"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wwcu3"]
 resource_local_to_scene = true
 shader = ExtResource("2_wwcu3")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -22,7 +23,7 @@ shader_parameter/number_of_images = Vector2(1, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iyx0m"]
 size = Vector2(50, 50)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_74lek"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_spkmw"]
 resource_local_to_scene = true
 shader = ExtResource("2_wwcu3")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -32,7 +33,7 @@ shader_parameter/inside = false
 shader_parameter/add_margins = true
 shader_parameter/number_of_images = Vector2(1, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_j5jx5"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b87dp"]
 resource_local_to_scene = true
 shader = ExtResource("2_wwcu3")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -42,7 +43,7 @@ shader_parameter/inside = false
 shader_parameter/add_margins = true
 shader_parameter/number_of_images = Vector2(1, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_lpvoh"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8m1ip"]
 resource_local_to_scene = true
 shader = ExtResource("2_wwcu3")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -52,7 +53,7 @@ shader_parameter/inside = false
 shader_parameter/add_margins = true
 shader_parameter/number_of_images = Vector2(1, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_at5dv"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0bicx"]
 resource_local_to_scene = true
 shader = ExtResource("2_wwcu3")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -77,7 +78,7 @@ position = Vector2(171, 89)
 shape = SubResource("RectangleShape2D_bl13t")
 
 [node name="Sprite2D" parent="MousePhysicsObject" index="1" unique_id=420557678]
-material = SubResource("ShaderMaterial_iyx0m")
+material = SubResource("ShaderMaterial_wwcu3")
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("3_spkmw")
 
@@ -91,7 +92,7 @@ position = Vector2(100, 44)
 shape = SubResource("RectangleShape2D_bl13t")
 
 [node name="Sprite2D" parent="MousePhysicsObject2" index="1" unique_id=420557678]
-material = SubResource("ShaderMaterial_74lek")
+material = SubResource("ShaderMaterial_spkmw")
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("3_spkmw")
 
@@ -105,7 +106,7 @@ position = Vector2(182, 24)
 shape = SubResource("RectangleShape2D_bl13t")
 
 [node name="Sprite2D" parent="MousePhysicsObject3" index="1" unique_id=420557678]
-material = SubResource("ShaderMaterial_j5jx5")
+material = SubResource("ShaderMaterial_b87dp")
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("3_spkmw")
 
@@ -119,7 +120,7 @@ position = Vector2(122, -51)
 shape = SubResource("RectangleShape2D_bl13t")
 
 [node name="Sprite2D" parent="MousePhysicsObject4" index="1" unique_id=420557678]
-material = SubResource("ShaderMaterial_lpvoh")
+material = SubResource("ShaderMaterial_8m1ip")
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("3_spkmw")
 
@@ -133,12 +134,14 @@ position = Vector2(146, -132)
 shape = SubResource("RectangleShape2D_bl13t")
 
 [node name="Sprite2D" parent="MousePhysicsObject5" index="1" unique_id=420557678]
-material = SubResource("ShaderMaterial_at5dv")
+material = SubResource("ShaderMaterial_0bicx")
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("3_spkmw")
 
 [node name="CollisionShape2D" parent="MousePhysicsObject5/Pickable" parent_id_path=PackedInt32Array(231382711, 141324948) index="0" unique_id=583126960]
 shape = SubResource("RectangleShape2D_iyx0m")
+
+[node name="pause_menu" parent="." unique_id=1299909858 instance=ExtResource("4_wwcu3")]
 
 [editable path="MousePhysicsObject"]
 [editable path="MousePhysicsObject/Pickable"]
