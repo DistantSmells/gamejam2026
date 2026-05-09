@@ -10,21 +10,32 @@
 [ext_resource type="PackedScene" uid="uid://bjrqqh3te1688" path="res://components/cursor.tscn" id="9_7r4gi"]
 [ext_resource type="PackedScene" uid="uid://0g6ykmt47e4q" path="res://scenes/pencil.tscn" id="10_e3hyu"]
 [ext_resource type="PackedScene" uid="uid://cdfd2iktpbuoo" path="res://components/ruler.tscn" id="10_w7kh3"]
-[ext_resource type="PackedScene" path="res://components/table.tscn" id="11_q5onr"]
+[ext_resource type="PackedScene" uid="uid://dxgakwf0r6ib1" path="res://components/table.tscn" id="11_q5onr"]
 [ext_resource type="PackedScene" uid="uid://dqwhipmq04uol" path="res://components/hitbox.tscn" id="12_jhx03"]
+[ext_resource type="PackedScene" uid="uid://b3vt38muogqep" path="res://scenes/water_bottle.tscn" id="13_jhx03"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xo05s"]
+size = Vector2(292, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q5onr"]
 resource_local_to_scene = true
-size = Vector2(160, 90)
+size = Vector2(160, 97)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jhx03"]
 resource_local_to_scene = true
-size = Vector2(594, 120)
+size = Vector2(712, 128)
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_q5onr"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o8fc1"]
+size = Vector2(98, 20)
 
 [node name="World" type="Node2D" unique_id=724757792]
 script = ExtResource("1_2tsk8")
+
+[node name="Hitbox3" parent="." unique_id=1047647142 instance=ExtResource("12_jhx03")]
+
+[node name="CollisionShape2D" parent="Hitbox3" index="0" unique_id=687741460]
+position = Vector2(890, 245)
+shape = SubResource("RectangleShape2D_xo05s")
 
 [node name="Player" parent="." unique_id=1553788574 instance=ExtResource("2_rwgxs")]
 position = Vector2(47, 149)
@@ -35,13 +46,14 @@ position = Vector2(80, 134)
 zoom_target = 2.0
 
 [node name="CollisionShape2D" parent="CameraZone" index="0" unique_id=260718912]
+position = Vector2(0, 3.5)
 shape = SubResource("RectangleShape2D_q5onr")
 
 [node name="CameraZone2" parent="." unique_id=1803974424 instance=ExtResource("5_71j4m")]
 position = Vector2(261, 119)
 
 [node name="CollisionShape2D" parent="CameraZone2" index="0" unique_id=260718912]
-position = Vector2(196, -1)
+position = Vector2(255, 3)
 shape = SubResource("RectangleShape2D_jhx03")
 
 [node name="Camera2D" parent="." unique_id=1606371719 node_paths=PackedStringArray("target", "current_boundary") instance=ExtResource("4_k0juu")]
@@ -60,45 +72,63 @@ position = Vector2(107, 154)
 layer = 2
 
 [node name="Cursor" parent="Mouse" unique_id=2098125822 instance=ExtResource("9_7r4gi")]
+position = Vector2(274.99997, 41.999996)
 
 [node name="Pencil" parent="." unique_id=1177728474 instance=ExtResource("10_e3hyu")]
-position = Vector2(277, 40)
+position = Vector2(563, 50)
 
 [node name="Pencil2" parent="." unique_id=1707308476 instance=ExtResource("10_e3hyu")]
-position = Vector2(283, 55)
+position = Vector2(569, 65)
 
 [node name="Pencil3" parent="." unique_id=1640443263 instance=ExtResource("10_e3hyu")]
-position = Vector2(264, 24)
+position = Vector2(564, 34)
 
 [node name="Ruler" parent="." unique_id=1557476 instance=ExtResource("10_w7kh3")]
-position = Vector2(237, 168)
+position = Vector2(638, 64)
 
 [node name="Ruler2" parent="." unique_id=574998798 instance=ExtResource("10_w7kh3")]
-position = Vector2(476, 168)
+position = Vector2(641, 49)
 
 [node name="Ruler3" parent="." unique_id=1306397971 instance=ExtResource("10_w7kh3")]
-position = Vector2(477, -10)
+position = Vector2(633, 31)
 
 [node name="table1" parent="." unique_id=172784535 instance=ExtResource("11_q5onr")]
-position = Vector2(224, 237)
+position = Vector2(121, 249)
 collision_layer = 2
 collision_mask = 0
 
-[node name="table2" parent="." unique_id=890730072 instance=ExtResource("11_q5onr")]
-position = Vector2(510, 237)
-collision_layer = 2
-collision_mask = 0
-
-[node name="Hitbox" parent="." unique_id=1047647142 instance=ExtResource("12_jhx03")]
+[node name="Hitbox" parent="." unique_id=356412680 instance=ExtResource("12_jhx03")]
 position = Vector2(357, 213)
 
 [node name="CollisionShape2D" parent="Hitbox" index="0" unique_id=687741460]
-position = Vector2(9, 0)
-shape = SubResource("WorldBoundaryShape2D_q5onr")
+position = Vector2(-117, 26)
+shape = SubResource("RectangleShape2D_o8fc1")
+
+[node name="Water Bottle" parent="." unique_id=2002242672 instance=ExtResource("13_jhx03")]
+position = Vector2(291, 145)
+
+[node name="table2" parent="." unique_id=2013964932 instance=ExtResource("11_q5onr")]
+position = Vector2(361, 249)
+collision_layer = 2
+collision_mask = 0
+
+[node name="table3" parent="." unique_id=225803382 instance=ExtResource("11_q5onr")]
+position = Vector2(646, 249)
+collision_layer = 2
+collision_mask = 0
+
+[node name="Hitbox2" parent="." unique_id=1685102143 instance=ExtResource("12_jhx03")]
+position = Vector2(357, 213)
+
+[node name="CollisionShape2D" parent="Hitbox2" index="0" unique_id=687741460]
+position = Vector2(146, 30)
+shape = SubResource("RectangleShape2D_o8fc1")
 
 [connection signal="died" from="Player" to="." method="_on_player_died"]
 [connection signal="main_menu_freed" from="Main Menu" to="." method="_on_main_menu_main_menu_freed"]
 
+[editable path="Hitbox3"]
 [editable path="CameraZone"]
 [editable path="CameraZone2"]
 [editable path="Hitbox"]
+[editable path="Hitbox2"]
