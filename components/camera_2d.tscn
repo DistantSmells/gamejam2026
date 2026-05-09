@@ -6,6 +6,8 @@
 size = Vector2(10, 180)
 
 [node name="Camera2D" type="Camera2D" unique_id=1606371719]
+limit_smoothed = true
+position_smoothing_enabled = true
 script = ExtResource("1_3nkou")
 
 [node name="LeftBoundary" type="StaticBody2D" parent="." unique_id=256749903]

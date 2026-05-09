@@ -1,6 +1,6 @@
 extends Camera2D
 
-@export var lerp_coefficient: float = 0.1
+#@export var lerp_coefficient: float = 0.6
 @export var target : Node2D = null
 @export var current_boundary : Area2D = null
 var furthest_world_x: float
@@ -20,4 +20,4 @@ func _ready():
 
 func _physics_process(delta: float) -> void:
 	if target != null:
-		self.global_position = lerp(self.global_position, target.global_position, 0.7)
+		self.global_position = target.global_position

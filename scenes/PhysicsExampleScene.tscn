@@ -119,6 +119,7 @@ shader_parameter/number_of_images = Vector2(1, 1)
 size = Vector2(500, 300)
 
 [node name="PhysicsExampleScene" type="Node2D" unique_id=95700796]
+position = Vector2(-158, -77)
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1561995141]
 position = Vector2(163, 180)
