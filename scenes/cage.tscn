@@ -23,8 +23,9 @@ shader_parameter/number_of_images = Vector2(1, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vafpy"]
 size = Vector2(6, 21)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_l2c6p"]
-size = Vector2(11.5, 4)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vafpy"]
+radius = 2.0
+height = 10.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ujwbq"]
 size = Vector2(2, 20)
@@ -46,7 +47,7 @@ height = 25.0
 size = Vector2(99, 6)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1krpw"]
-size = Vector2(100, 4)
+size = Vector2(98, 4)
 
 [node name="Cage" type="Node2D" unique_id=2134776975]
 
@@ -79,7 +80,8 @@ shape = SubResource("RectangleShape2D_vafpy")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Pin" unique_id=114813033]
 position = Vector2(-0.25, -8)
-shape = SubResource("RectangleShape2D_l2c6p")
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_vafpy")
 
 [node name="Right" type="StaticBody2D" parent="." unique_id=1469308907]
 position = Vector2(3, -20)
@@ -134,6 +136,9 @@ shape = SubResource("CapsuleShape2D_pg1wr")
 position = Vector2(3, 20)
 node_a = NodePath("../Bottom")
 node_b = NodePath("../Door")
+angular_limit_enabled = true
+angular_limit_lower = 0.017453292
+angular_limit_upper = 3.1415927
 
 [node name="Bottom" type="StaticBody2D" parent="." unique_id=962696779]
 position = Vector2(-43, 23)
@@ -144,7 +149,7 @@ collision_mask = 0
 shape = SubResource("RectangleShape2D_jaqrq")
 
 [node name="Top" type="StaticBody2D" parent="." unique_id=1566970793]
-position = Vector2(-45, -32)
+position = Vector2(-46, -32)
 collision_layer = 2
 collision_mask = 2
 

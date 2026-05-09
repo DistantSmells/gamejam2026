@@ -2,19 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bixl0pssfqvto" path="res://scripts/camera_2d.gd" id="1_3nkou"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3nkou"]
-size = Vector2(10, 180)
-
 [node name="Camera2D" type="Camera2D" unique_id=1606371719]
+process_mode = 3
 zoom = Vector2(1.4, 1.4)
 limit_smoothed = true
 position_smoothing_enabled = true
 script = ExtResource("1_3nkou")
-
-[node name="LeftBoundary" type="StaticBody2D" parent="." unique_id=256749903]
-position = Vector2(-166, 0)
-collision_layer = 4
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftBoundary" unique_id=77461458]
-shape = SubResource("RectangleShape2D_3nkou")

@@ -1,5 +1,6 @@
 extends Area2D
 
+@export var zoom_target : float = 1.0
 signal camera_zone_entered
 signal camera_zone_exited
 
@@ -23,3 +24,4 @@ func set_camera_boundaries() -> void:
 			child.limit_right = $CollisionShape2D.global_position.x + size_x
 			child.limit_top = $CollisionShape2D.global_position.y - size_y
 			child.limit_bottom = $CollisionShape2D.global_position.y + size_y
+			child.zoom_target = self.zoom_target

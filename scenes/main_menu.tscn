@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://cemm6i65inlph"]
+
+[ext_resource type="Script" uid="uid://x1ojs6svb4b1" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Shader" uid="uid://h0okc2471w7p" path="res://assets/shaders/blur.gdshader" id="2_ekxnf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bqqt6"]
+resource_local_to_scene = true
+shader = ExtResource("2_ekxnf")
+shader_parameter/lod = 1.0000000475
+
+[node name="Main Menu" type="CanvasLayer" unique_id=770710148]
+process_mode = 3
+script = ExtResource("1_l6cm7")
+
+[node name="BlurOverlay" type="ColorRect" parent="." unique_id=1497019649]
+material = SubResource("ShaderMaterial_bqqt6")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=652660504]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.0
+offset_top = -33.0
+offset_right = 21.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer" unique_id=1609755209]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/MarginContainer" unique_id=1077911305]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=1978289762]
+layout_mode = 2
+text = "Play"
+
+[node name="Quit" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=610571029]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

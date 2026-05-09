@@ -6,6 +6,8 @@
 resource_local_to_scene = true
 
 [node name="CameraZone" type="Area2D" unique_id=1477006201]
+process_mode = 3
+collision_layer = 0
 script = ExtResource("1_wkita")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=260718912]

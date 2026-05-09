@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://2o38ba43vbq4"]
+
+[ext_resource type="PackedScene" uid="uid://bmk36n1ky8i64" path="res://components/player.tscn" id="1_vn80e"]
+[ext_resource type="PackedScene" uid="uid://ddgsc4edq6rtb" path="res://components/camera_2d.tscn" id="2_3mq1s"]
+[ext_resource type="PackedScene" uid="uid://mbbdtwofvb6y" path="res://components/camera_zone.tscn" id="3_jm2hm"]
+[ext_resource type="PackedScene" uid="uid://focj2udki44v" path="res://scenes/cage.tscn" id="4_a0ubh"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8uh7m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b87dp"]
+size = Vector2(500, 300)
+
+[node name="Sandbox" type="Node2D" unique_id=95700796]
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1561995141]
+position = Vector2(163, 180)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=470210934]
+shape = SubResource("WorldBoundaryShape2D_8uh7m")
+
+[node name="Player" parent="." unique_id=1553788574 instance=ExtResource("1_vn80e")]
+position = Vector2(58, 126)
+collision_mask = 6
+
+[node name="Camera2D" parent="." unique_id=1606371719 node_paths=PackedStringArray("target", "current_boundary") instance=ExtResource("2_3mq1s")]
+target = NodePath("../Player")
+current_boundary = NodePath("../CameraZone")
+
+[node name="CameraZone" parent="." unique_id=1477006201 instance=ExtResource("3_jm2hm")]
+position = Vector2(170, 89)
+
+[node name="CollisionShape2D" parent="CameraZone" index="0" unique_id=260718912]
+shape = SubResource("RectangleShape2D_b87dp")
+
+[node name="CameraZone2" parent="." unique_id=1605682544 instance=ExtResource("3_jm2hm")]
+position = Vector2(676, 89)
+
+[node name="CollisionShape2D" parent="CameraZone2" index="0" unique_id=260718912]
+shape = SubResource("RectangleShape2D_b87dp")
+
+[node name="Cage" parent="." unique_id=2134776975 instance=ExtResource("4_a0ubh")]
+position = Vector2(142, 148)
+
+[editable path="CameraZone"]
+[editable path="CameraZone2"]

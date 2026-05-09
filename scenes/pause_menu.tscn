@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bffl2auwp6o82"]
+[gd_scene format=3 uid="uid://146l5fidjgkx"]
 
 [ext_resource type="Script" uid="uid://buslsymc6fjje" path="res://scripts/pause_menu.gd" id="1_hdmo1"]
 [ext_resource type="Shader" uid="uid://h0okc2471w7p" path="res://assets/shaders/blur.gdshader" id="2_nwcfo"]

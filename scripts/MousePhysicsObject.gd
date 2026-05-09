@@ -16,7 +16,7 @@ const MOMENT_ARM_COEFFICIENT : float = 0.8
 
 func _process(delta: float) -> void:
 	if $Pickable.hovered and not self.is_held:
-		$Sprite2D.material.set_shader_parameter("width", 4.0)
+		$Sprite2D.material.set_shader_parameter("width", 2.0)
 	else:
 		$Sprite2D.material.set_shader_parameter("width", 0.0)
 

@@ -34,7 +34,7 @@ func _physics_process(delta: float) -> void:
 size = Vector2(10, 10)
 
 [node name="Player" type="CharacterBody2D" unique_id=1553788574]
-collision_mask = 5
+collision_mask = 2
 script = SubResource("GDScript_if8o1")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=277905627]
