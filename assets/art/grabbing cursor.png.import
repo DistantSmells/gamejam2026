@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjsh5icuh5yen"
-path="res://.godot/imported/cage foreground.png-9b0370a56c124799cad8fb9d8350fd65.ctex"
+uid="uid://be7l8c2n103eq"
+path="res://.godot/imported/grabbing cursor.png-5d73923c9ae5af6bc7ceefd874971148.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/cage foreground.png"
-dest_files=["res://.godot/imported/cage foreground.png-9b0370a56c124799cad8fb9d8350fd65.ctex"]
+source_file="res://assets/art/grabbing cursor.png"
+dest_files=["res://.godot/imported/grabbing cursor.png-5d73923c9ae5af6bc7ceefd874971148.ctex"]
 
 [params]
 

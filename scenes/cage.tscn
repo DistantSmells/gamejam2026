@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://focj2udki44v"]
 
-[ext_resource type="Texture2D" uid="uid://fwhrcf8j7mlc" path="res://assets/Art/cage bg.png" id="1_qqn5r"]
-[ext_resource type="Texture2D" uid="uid://bknmwc5ino35m" path="res://assets/Art/cage door.png" id="2_pw5cj"]
-[ext_resource type="Texture2D" uid="uid://cjsh5icuh5yen" path="res://assets/Art/cage foreground.png" id="3_f6fro"]
-[ext_resource type="Texture2D" uid="uid://dne0ymh8hq7ue" path="res://assets/Art/cage pin.png" id="4_uihcc"]
+[ext_resource type="Texture2D" uid="uid://fwhrcf8j7mlc" path="res://assets/art/cage bg.png" id="1_qqn5r"]
+[ext_resource type="Texture2D" uid="uid://bknmwc5ino35m" path="res://assets/art/cage door.png" id="2_pw5cj"]
+[ext_resource type="Texture2D" uid="uid://cjsh5icuh5yen" path="res://assets/art/cage foreground.png" id="3_f6fro"]
+[ext_resource type="Texture2D" uid="uid://dne0ymh8hq7ue" path="res://assets/art/cage pin.png" id="4_uihcc"]
 [ext_resource type="PackedScene" uid="uid://8sovakvkisrc" path="res://components/mouse_physics_object.tscn" id="5_0cbc7"]
 [ext_resource type="Shader" uid="uid://bjkg0y4hmr701" path="res://assets/shaders/Outline.gdshader" id="6_pg1wr"]
 

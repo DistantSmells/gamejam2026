@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://2o38ba43vbq4"]
 
-[ext_resource type="PackedScene" uid="uid://bmk36n1ky8i64" path="res://components/player.tscn" id="1_vn80e"]
-[ext_resource type="PackedScene" uid="uid://ddgsc4edq6rtb" path="res://components/camera_2d.tscn" id="2_3mq1s"]
-[ext_resource type="PackedScene" uid="uid://mbbdtwofvb6y" path="res://components/camera_zone.tscn" id="3_jm2hm"]
-[ext_resource type="PackedScene" uid="uid://focj2udki44v" path="res://scenes/cage.tscn" id="4_a0ubh"]
+[ext_resource type="PackedScene" uid="uid://bmk36n1ky8i64" path="res://components/player.tscn" id="1_j6lu3"]
+[ext_resource type="PackedScene" uid="uid://ddgsc4edq6rtb" path="res://components/camera_2d.tscn" id="2_tpt06"]
+[ext_resource type="PackedScene" uid="uid://mbbdtwofvb6y" path="res://components/camera_zone.tscn" id="3_16ffl"]
+[ext_resource type="PackedScene" uid="uid://focj2udki44v" path="res://scenes/cage.tscn" id="4_17a3a"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8uh7m"]
 
@@ -20,27 +20,27 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=470210934]
 shape = SubResource("WorldBoundaryShape2D_8uh7m")
 
-[node name="Player" parent="." unique_id=1553788574 instance=ExtResource("1_vn80e")]
+[node name="Player" parent="." unique_id=1553788574 instance=ExtResource("1_j6lu3")]
 position = Vector2(58, 126)
 collision_mask = 6
 
-[node name="Camera2D" parent="." unique_id=1606371719 node_paths=PackedStringArray("target", "current_boundary") instance=ExtResource("2_3mq1s")]
+[node name="Camera2D" parent="." unique_id=1606371719 node_paths=PackedStringArray("target", "current_boundary") instance=ExtResource("2_tpt06")]
 target = NodePath("../Player")
 current_boundary = NodePath("../CameraZone")
 
-[node name="CameraZone" parent="." unique_id=1477006201 instance=ExtResource("3_jm2hm")]
+[node name="CameraZone" parent="." unique_id=1477006201 instance=ExtResource("3_16ffl")]
 position = Vector2(170, 89)
 
 [node name="CollisionShape2D" parent="CameraZone" index="0" unique_id=260718912]
 shape = SubResource("RectangleShape2D_b87dp")
 
-[node name="CameraZone2" parent="." unique_id=1605682544 instance=ExtResource("3_jm2hm")]
+[node name="CameraZone2" parent="." unique_id=1605682544 instance=ExtResource("3_16ffl")]
 position = Vector2(676, 89)
 
 [node name="CollisionShape2D" parent="CameraZone2" index="0" unique_id=260718912]
 shape = SubResource("RectangleShape2D_b87dp")
 
-[node name="Cage" parent="." unique_id=2134776975 instance=ExtResource("4_a0ubh")]
+[node name="Cage" parent="." unique_id=2134776975 instance=ExtResource("4_17a3a")]
 position = Vector2(142, 148)
 
 [editable path="CameraZone"]

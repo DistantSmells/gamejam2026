@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjsh5icuh5yen"
-path="res://.godot/imported/cage foreground.png-9b0370a56c124799cad8fb9d8350fd65.ctex"
+uid="uid://ca1hthge1tff0"
+path="res://.godot/imported/Walk jump and idle 3.png-32afb958a3804b6a2817afab05d2a530.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/cage foreground.png"
-dest_files=["res://.godot/imported/cage foreground.png-9b0370a56c124799cad8fb9d8350fd65.ctex"]
+source_file="res://assets/art/Walk jump and idle 3.png"
+dest_files=["res://.godot/imported/Walk jump and idle 3.png-32afb958a3804b6a2817afab05d2a530.ctex"]
 
 [params]
 
