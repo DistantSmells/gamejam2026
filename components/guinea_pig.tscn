@@ -1,7 +1,14 @@
+<<<<<<< Updated upstream
 [gd_scene format=3 uid="uid://baqrpytblmd28"]
 
 [ext_resource type="Script" uid="uid://12uy8nnakj8i" path="res://scripts/guinea_pig.gd" id="1_uv1mn"]
 [ext_resource type="Texture2D" uid="uid://dne0hogcqp3re" path="res://images/icon.svg" id="2_lx6yb"]
+=======
+[gd_scene format=3 uid="uid://rbbw1787tid6"]
+
+[ext_resource type="Script" path="res://scripts/guinea_pig.gd" id="1_uv1mn"]
+[ext_resource type="Texture2D" path="res://images/icon.svg" id="2_lx6yb"]
+>>>>>>> Stashed changes
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0hol4"]
 radius = 59.3043
