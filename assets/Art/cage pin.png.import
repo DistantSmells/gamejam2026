@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dne0ymh8hq7ue"
-path="res://.godot/imported/cage pin.png-6701d21024f6a43bff3c04161d3c8246.ctex"
+uid="uid://c2ee4dvmpdqo7"
+path="res://.godot/imported/cage pin.png-da722bc3c74d8a5d7ad47f22b4369fdc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Art/cage pin.png"
-dest_files=["res://.godot/imported/cage pin.png-6701d21024f6a43bff3c04161d3c8246.ctex"]
+source_file="res://assets/art/cage pin.png"
+dest_files=["res://.godot/imported/cage pin.png-da722bc3c74d8a5d7ad47f22b4369fdc.ctex"]
 
 [params]
 

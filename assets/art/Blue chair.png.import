@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8fx3yuuvfca7"
-path="res://.godot/imported/cage door.png-0f922bc83eec506ef01a4f606a6598eb.ctex"
+uid="uid://dtjf6qci0o7bx"
+path="res://.godot/imported/Blue chair.png-c224f25045a3958edfad4d0f003c4157.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/cage door.png"
-dest_files=["res://.godot/imported/cage door.png-0f922bc83eec506ef01a4f606a6598eb.ctex"]
+source_file="res://assets/art/Blue chair.png"
+dest_files=["res://.godot/imported/Blue chair.png-c224f25045a3958edfad4d0f003c4157.ctex"]
 
 [params]
 

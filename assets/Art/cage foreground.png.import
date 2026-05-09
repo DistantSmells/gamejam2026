@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjsh5icuh5yen"
-path="res://.godot/imported/cage foreground.png-e2e728c54603858937b5b6c3f520ec2d.ctex"
+uid="uid://odx7tq8qhiwv"
+path="res://.godot/imported/cage foreground.png-9b0370a56c124799cad8fb9d8350fd65.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Art/cage foreground.png"
-dest_files=["res://.godot/imported/cage foreground.png-e2e728c54603858937b5b6c3f520ec2d.ctex"]
+source_file="res://assets/art/cage foreground.png"
+dest_files=["res://.godot/imported/cage foreground.png-9b0370a56c124799cad8fb9d8350fd65.ctex"]
 
 [params]
 

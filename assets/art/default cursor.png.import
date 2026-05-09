@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8fx3yuuvfca7"
-path="res://.godot/imported/cage door.png-0f922bc83eec506ef01a4f606a6598eb.ctex"
+uid="uid://e2k50w4w03hs"
+path="res://.godot/imported/default cursor.png-d60e31c69cea47924967dd67ea152499.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/cage door.png"
-dest_files=["res://.godot/imported/cage door.png-0f922bc83eec506ef01a4f606a6598eb.ctex"]
+source_file="res://assets/art/default cursor.png"
+dest_files=["res://.godot/imported/default cursor.png-d60e31c69cea47924967dd67ea152499.ctex"]
 
 [params]
 

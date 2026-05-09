@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://b5fw5t7dsgp6m"]
+
+[ext_resource type="Texture2D" uid="uid://ffql6ioisqnc" path="res://assets/art/Mouse trap animation.png" id="1_ndwav"]
+[ext_resource type="Script" uid="uid://c47bqcs5y6j1n" path="res://scripts/mouse_trap.gd" id="2_xg4a2"]
+[ext_resource type="PackedScene" uid="uid://dqwhipmq04uol" path="res://components/hitbox.tscn" id="3_d0gfr"]
+[ext_resource type="PackedScene" uid="uid://be334xo25m6uf" path="res://components/trigger_box.tscn" id="4_2ljom"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xg4a2"]
+atlas = ExtResource("1_ndwav")
+region = Rect2(576, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0gfr"]
+atlas = ExtResource("1_ndwav")
+region = Rect2(0, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ljom"]
+atlas = ExtResource("1_ndwav")
+region = Rect2(0, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2s6eu"]
+atlas = ExtResource("1_ndwav")
+region = Rect2(96, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awwcl"]
+atlas = ExtResource("1_ndwav")
+region = Rect2(192, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwwl5"]
+atlas = ExtResource("1_ndwav")
+region = Rect2(288, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6gl5m"]
+atlas = ExtResource("1_ndwav")
+region = Rect2(384, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4l3yc"]
+atlas = ExtResource("1_ndwav")
+region = Rect2(480, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uanb0"]
+atlas = ExtResource("1_ndwav")
+region = Rect2(576, 0, 96, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qvob6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xg4a2")
+}],
+"loop": true,
+"name": &"After",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0gfr")
+}],
+"loop": true,
+"name": &"Before",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ljom")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2s6eu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_awwcl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xwwl5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6gl5m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4l3yc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uanb0")
+}],
+"loop": false,
+"name": &"Snap",
+"speed": 16.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xg4a2"]
+size = Vector2(64, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d0gfr"]
+size = Vector2(50, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ljom"]
+size = Vector2(30, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2s6eu"]
+size = Vector2(40, 20)
+
+[node name="MouseTrap" type="AnimatedSprite2D" unique_id=983163397]
+sprite_frames = SubResource("SpriteFrames_qvob6")
+animation = &"Snap"
+autoplay = "Before"
+frame = 6
+frame_progress = 1.0
+offset = Vector2(6, -32)
+script = ExtResource("2_xg4a2")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1974800726]
+position = Vector2(-2, -3)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1040096363]
+shape = SubResource("RectangleShape2D_xg4a2")
+
+[node name="Hitbox" parent="." unique_id=1047647142 instance=ExtResource("3_d0gfr")]
+
+[node name="CollisionShape2D" parent="Hitbox" index="0" unique_id=687741460]
+position = Vector2(-4, -15)
+shape = SubResource("RectangleShape2D_d0gfr")
+disabled = true
+
+[node name="TriggerBox" parent="." unique_id=1398177743 instance=ExtResource("4_2ljom")]
+
+[node name="CollisionShape2D" parent="TriggerBox" index="0" unique_id=1083763251]
+position = Vector2(-10, -10)
+shape = SubResource("RectangleShape2D_2ljom")
+
+[node name="PhysicsDetection" type="Area2D" parent="." unique_id=1307655834]
+position = Vector2(-10, -15)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PhysicsDetection" unique_id=384370451]
+shape = SubResource("RectangleShape2D_2s6eu")
+
+[connection signal="Triggered" from="TriggerBox" to="." method="_on_trigger_box_triggered"]
+[connection signal="body_entered" from="PhysicsDetection" to="." method="_on_physics_detection_body_entered"]
+
+[editable path="Hitbox"]
+[editable path="TriggerBox"]

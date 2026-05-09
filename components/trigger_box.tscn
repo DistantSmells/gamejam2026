@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://be334xo25m6uf"]
+
+[ext_resource type="Script" uid="uid://cp4rry7a1gp6i" path="res://scripts/trigger_box.gd" id="1_dn7ku"]
+
+[node name="TriggerBox" type="Area2D" unique_id=1398177743]
+collision_layer = 0
+script = ExtResource("1_dn7ku")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1083763251]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

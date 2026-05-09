@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bjrqqh3te1688"]
+
+[ext_resource type="Texture2D" uid="uid://be7l8c2n103eq" path="res://assets/art/grabbing cursor.png" id="1_1pxpd"]
+[ext_resource type="Texture2D" uid="uid://e2k50w4w03hs" path="res://assets/art/default cursor.png" id="1_3oqqw"]
+[ext_resource type="Script" uid="uid://b4s6w1khw3i2g" path="res://scripts/cursor.gd" id="1_f7wah"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f7wah"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_1pxpd")
+}],
+"loop": true,
+"name": &"Closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3oqqw")
+}],
+"loop": true,
+"name": &"Open",
+"speed": 5.0
+}]
+
+[node name="Cursor" type="AnimatedSprite2D" unique_id=2098125822]
+process_mode = 3
+z_index = 100
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_f7wah")
+animation = &"Open"
+offset = Vector2(3, 3)
+flip_h = true
+script = ExtResource("1_f7wah")

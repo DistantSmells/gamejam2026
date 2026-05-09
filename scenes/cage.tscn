@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://focj2udki44v"]
 
-[ext_resource type="Texture2D" uid="uid://fwhrcf8j7mlc" path="res://assets/Art/cage bg.png" id="1_qqn5r"]
-[ext_resource type="Texture2D" uid="uid://bknmwc5ino35m" path="res://assets/Art/cage door.png" id="2_pw5cj"]
-[ext_resource type="Texture2D" uid="uid://cjsh5icuh5yen" path="res://assets/Art/cage foreground.png" id="3_f6fro"]
-[ext_resource type="Texture2D" uid="uid://dne0ymh8hq7ue" path="res://assets/Art/cage pin.png" id="4_uihcc"]
+[ext_resource type="Texture2D" path="res://assets/art/cage bg.png" id="1_qqn5r"]
+[ext_resource type="Texture2D" path="res://assets/art/cage door.png" id="2_pw5cj"]
+[ext_resource type="Texture2D" path="res://assets/art/cage foreground.png" id="3_f6fro"]
+[ext_resource type="Texture2D" path="res://assets/art/cage pin.png" id="4_uihcc"]
 [ext_resource type="PackedScene" uid="uid://8sovakvkisrc" path="res://components/mouse_physics_object.tscn" id="5_0cbc7"]
 [ext_resource type="Shader" uid="uid://bjkg0y4hmr701" path="res://assets/shaders/Outline.gdshader" id="6_pg1wr"]
 
@@ -31,7 +31,7 @@ height = 10.0
 size = Vector2(2, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_af1gf"]
-size = Vector2(10, 80)
+size = Vector2(2, 60)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p6q3i"]
 size = Vector2(2, 2)
@@ -47,7 +47,7 @@ height = 25.0
 size = Vector2(99, 6)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1krpw"]
-size = Vector2(98, 4)
+size = Vector2(99, 4)
 
 [node name="Cage" type="Node2D" unique_id=2134776975]
 
@@ -62,7 +62,6 @@ texture = ExtResource("3_f6fro")
 
 [node name="Pin" parent="." unique_id=1177728474 instance=ExtResource("5_0cbc7")]
 position = Vector2(10, -6)
-collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" parent="Pin" index="0" unique_id=208919183]
@@ -92,7 +91,7 @@ collision_mask = 0
 shape = SubResource("RectangleShape2D_ujwbq")
 
 [node name="Left" type="StaticBody2D" parent="." unique_id=294090402]
-position = Vector2(-100, -14)
+position = Vector2(-95, -4)
 collision_layer = 2
 collision_mask = 0
 
@@ -154,6 +153,7 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Top" unique_id=1835031219]
+position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_1krpw")
 
 [editable path="Pin"]

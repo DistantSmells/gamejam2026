@@ -1,24 +1,25 @@
-[gd_scene format=3 uid="uid://dgvijdq6piool"]
+[gd_scene format=3 uid="uid://cux827h12xdl3"]
 
 [ext_resource type="Script" uid="uid://cwcjo3ysvurxv" path="res://scripts/thumbtack.gd" id="1_rwtl7"]
-[ext_resource type="Texture2D" uid="uid://dmb2pmycc2vy0" path="res://assets/Art/red thumbtack.png" id="2_bc5e8"]
-[ext_resource type="Texture2D" uid="uid://di4pdhmissn4y" path="res://blue thumbtack.png" id="3_n4bal"]
-[ext_resource type="Texture2D" uid="uid://wjonnr51gdx3" path="res://yellow thumbtack.png" id="4_trivn"]
+[ext_resource type="Texture2D" uid="uid://dmb2pmycc2vy0" path="res://assets/art/red thumbtack.png" id="2_bc5e8"]
+[ext_resource type="Texture2D" uid="uid://yojf37kprdyl" path="res://assets/art/yellow thumbtack.png" id="4_rwtl7"]
+[ext_resource type="Texture2D" uid="uid://dgux1x7c5gviq" path="res://assets/art/blue thumbtack.png" id="4_trivn"]
 [ext_resource type="PackedScene" uid="uid://dqwhipmq04uol" path="res://components/hitbox.tscn" id="5_6meh4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xirvl"]
-size = Vector2(6, 7)
+size = Vector2(6, 6)
 
 [node name="thumbtack" type="RigidBody2D" unique_id=1008471347]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_rwtl7")
-variations = Array[Texture2D]([ExtResource("2_bc5e8"), ExtResource("3_n4bal"), ExtResource("4_trivn")])
+variations = Array[Texture2D]([ExtResource("2_bc5e8"), ExtResource("4_trivn"), ExtResource("4_rwtl7")])
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=568659109]
 texture = ExtResource("2_bc5e8")
 
 [node name="Hitbox" parent="." unique_id=1047647142 instance=ExtResource("5_6meh4")]
+position = Vector2(0, 0.5)
 
 [node name="CollisionShape2D2" type="CollisionPolygon2D" parent="Hitbox" unique_id=701405102]
 polygon = PackedVector2Array(0.5, 0, -0.5, 0, 0, -3)

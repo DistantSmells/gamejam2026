@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8fx3yuuvfca7"
-path="res://.godot/imported/cage door.png-0f922bc83eec506ef01a4f606a6598eb.ctex"
+uid="uid://d2gs7mtabxh8b"
+path="res://.godot/imported/Water bottle.png-c0d211414322274a2549b6a6e329e8a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/cage door.png"
-dest_files=["res://.godot/imported/cage door.png-0f922bc83eec506ef01a4f606a6598eb.ctex"]
+source_file="res://assets/art/Water bottle.png"
+dest_files=["res://.godot/imported/Water bottle.png-c0d211414322274a2549b6a6e329e8a4.ctex"]
 
 [params]
 
