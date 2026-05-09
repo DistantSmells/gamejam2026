@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://mbbdtwofvb6y"]
+
+[ext_resource type="Script" uid="uid://cjx5ldjbw1nks" path="res://scripts/camera_zone.gd" id="1_wkita"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wkita"]
+resource_local_to_scene = true
+
+[node name="CameraZone" type="Area2D" unique_id=1477006201]
+script = ExtResource("1_wkita")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=260718912]
+shape = SubResource("RectangleShape2D_wkita")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
