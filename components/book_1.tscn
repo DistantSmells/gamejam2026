@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cmfpoyrw6oakf"]
+
+[ext_resource type="PackedScene" uid="uid://8sovakvkisrc" path="res://components/mouse_physics_object.tscn" id="1_f5dra"]
+[ext_resource type="Shader" uid="uid://bjkg0y4hmr701" path="res://assets/shaders/Outline.gdshader" id="2_441vn"]
+[ext_resource type="Texture2D" uid="uid://cwjkxogm4ftjv" path="res://assets/art/book1.png" id="3_0seyc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ab0dt"]
+size = Vector2(8, 44)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f5dra"]
+resource_local_to_scene = true
+shader = ExtResource("2_441vn")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/width = 0.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+shader_parameter/number_of_images = Vector2(1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f5dra"]
+size = Vector2(10, 48)
+
+[node name="Book1" unique_id=1177728474 instance=ExtResource("1_f5dra")]
+mass = 1.0
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=208919183]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_ab0dt")
+
+[node name="Sprite2D" parent="." index="1" unique_id=420557678]
+material = SubResource("ShaderMaterial_f5dra")
+texture = ExtResource("3_0seyc")
+offset = Vector2(-1, 0)
+
+[node name="Pickable" parent="." index="2" unique_id=141324948]
+position = Vector2(0, 1)
+
+[node name="CollisionShape2D" parent="Pickable" index="0" unique_id=583126960]
+shape = SubResource("RectangleShape2D_f5dra")
+
+[editable path="Pickable"]

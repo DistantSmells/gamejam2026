@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bgd77rurymos8"]
+
+[ext_resource type="Script" uid="uid://cttvb8temucnd" path="res://scripts/pencil_rain.gd" id="1_pdfhk"]
+[ext_resource type="PackedScene" uid="uid://be334xo25m6uf" path="res://components/trigger_box.tscn" id="2_lmck2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lmck2"]
+resource_local_to_scene = true
+
+[node name="PencilRain" type="Node2D" unique_id=2133244290]
+script = ExtResource("1_pdfhk")
+
+[node name="Timer" type="Timer" parent="." unique_id=1454486475]
+
+[node name="SpawnArea" type="Area2D" parent="." unique_id=329061949]
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpawnArea" unique_id=570417173]
+shape = SubResource("RectangleShape2D_lmck2")
+
+[node name="Start" parent="." unique_id=1398177743 instance=ExtResource("2_lmck2")]
+
+[node name="Stop" parent="." unique_id=258272594 instance=ExtResource("2_lmck2")]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="Triggered" from="Start" to="." method="_on_start_triggered"]
+[connection signal="Triggered" from="Stop" to="." method="_on_stop_triggered"]
+
+[editable path="Start"]
+[editable path="Stop"]

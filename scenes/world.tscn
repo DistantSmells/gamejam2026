@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://focj2udki44v" path="res://scenes/cage.tscn" id="6_qfnet"]
 [ext_resource type="PackedScene" uid="uid://146l5fidjgkx" path="res://scenes/pause_menu.tscn" id="7_i7141"]
 [ext_resource type="PackedScene" uid="uid://bjrqqh3te1688" path="res://components/cursor.tscn" id="9_7r4gi"]
-[ext_resource type="PackedScene" uid="uid://0g6ykmt47e4q" path="res://scenes/pencil.tscn" id="10_e3hyu"]
 [ext_resource type="PackedScene" uid="uid://cdfd2iktpbuoo" path="res://components/ruler.tscn" id="10_w7kh3"]
 [ext_resource type="PackedScene" uid="uid://dxgakwf0r6ib1" path="res://components/table.tscn" id="11_q5onr"]
 [ext_resource type="PackedScene" uid="uid://dqwhipmq04uol" path="res://components/hitbox.tscn" id="12_jhx03"]
@@ -1062,19 +1061,19 @@ position = Vector2(1019, 295)
 shape = SubResource("RectangleShape2D_xo05s")
 
 [node name="Player" parent="." unique_id=1553788574 instance=ExtResource("2_rwgxs")]
-position = Vector2(47, 149)
+position = Vector2(139, 154)
 collision_mask = 6
 
 [node name="CameraZone" parent="." unique_id=1477006201 instance=ExtResource("5_71j4m")]
-position = Vector2(80, 134)
+position = Vector2(175, 133)
 zoom_target = 2.0
 
 [node name="CollisionShape2D" parent="CameraZone" index="0" unique_id=260718912]
 position = Vector2(0, 9.5)
 shape = SubResource("RectangleShape2D_7t5mc")
 
-[node name="CameraZone2" parent="." unique_id=1803974424 instance=ExtResource("5_71j4m")]
-position = Vector2(261, 119)
+[node name="CameraZone2" parent="." unique_id=420631450 instance=ExtResource("5_71j4m")]
+position = Vector2(357, 111)
 
 [node name="CollisionShape2D" parent="CameraZone2" index="0" unique_id=260718912]
 position = Vector2(255, 75)
@@ -1086,7 +1085,7 @@ target = NodePath("../Player")
 current_boundary = NodePath("../CameraZone")
 
 [node name="Cage" parent="." unique_id=2134776975 instance=ExtResource("6_qfnet")]
-position = Vector2(107, 154)
+position = Vector2(210, 143)
 
 [node name="Main Menu" parent="." unique_id=770710148 instance=ExtResource("3_4wyf3")]
 

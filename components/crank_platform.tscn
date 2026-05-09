@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://dkd4vfxlynymh"]
+
+[ext_resource type="Script" uid="uid://6d0a4l3ma68y" path="res://scripts/crank_platform.gd" id="1_qrj8o"]
+[ext_resource type="Texture2D" uid="uid://dt45uvoj1x4l3" path="res://assets/icon.svg" id="2_l0upk"]
+[ext_resource type="PackedScene" uid="uid://c42nmympja2s7" path="res://components/pickable.tscn" id="3_xcx6m"]
+[ext_resource type="Shader" uid="uid://bjkg0y4hmr701" path="res://assets/shaders/Outline.gdshader" id="4_d4gav"]
+
+[sub_resource type="Curve2D" id="Curve2D_lo4mw"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -75.34454, 0, 0, 0, 0, 0, -125.76471, 0, 0, 0, 0, 0, -190.30254)
+}
+point_count = 4
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lo4mw"]
+size = Vector2(80, 10)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xcx6m"]
+radius = 80.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eu6c5"]
+shader = ExtResource("4_d4gav")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/width = 0.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+shader_parameter/number_of_images = Vector2(1, 1)
+
+[node name="CrankPlatform" type="Node2D" unique_id=1779107421]
+script = ExtResource("1_qrj8o")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1518270955]
+curve = SubResource("Curve2D_lo4mw")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=643655775]
+rotates = false
+
+[node name="Platform" type="StaticBody2D" parent="Path2D/PathFollow2D" unique_id=868672828]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Platform" unique_id=588167541]
+shape = SubResource("RectangleShape2D_lo4mw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D/Platform" unique_id=1889980038]
+scale = Vector2(0.7, 0.1)
+texture = ExtResource("2_l0upk")
+
+[node name="Crank" type="Sprite2D" parent="." unique_id=2089513801]
+position = Vector2(-77, -47)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_l0upk")
+
+[node name="Path2D" type="Path2D" parent="Crank" unique_id=1999871471]
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Crank/Path2D" unique_id=1596278263]
+rotates = false
+
+[node name="Handle" type="Sprite2D" parent="Crank/Path2D/PathFollow2D" unique_id=1610006286]
+
+[node name="Pickable" parent="Crank/Path2D/PathFollow2D" unique_id=141324948 instance=ExtResource("3_xcx6m")]
+
+[node name="CollisionShape2D" parent="Crank/Path2D/PathFollow2D/Pickable" index="0" unique_id=583126960]
+shape = SubResource("CircleShape2D_xcx6m")
+
+[node name="Handle" type="Sprite2D" parent="Crank/Path2D/PathFollow2D/Pickable" unique_id=1374606022]
+material = SubResource("ShaderMaterial_eu6c5")
+rotation = 0.7853982
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_l0upk")
+
+[node name="Line2D" type="Line2D" parent="Crank" unique_id=1857967972]
+default_color = Color(0.7411765, 0.41568628, 0.34901962, 1)
+
+[connection signal="dropped" from="Crank/Path2D/PathFollow2D/Pickable" to="." method="_on_pickable_dropped"]
+[connection signal="grabbed" from="Crank/Path2D/PathFollow2D/Pickable" to="." method="_on_pickable_grabbed"]
+
+[editable path="Crank/Path2D/PathFollow2D/Pickable"]
