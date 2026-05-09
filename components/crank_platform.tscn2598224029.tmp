@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dkd4vfxlynymh"]
+
+[ext_resource type="Script" uid="uid://6d0a4l3ma68y" path="res://scripts/crank_platform.gd" id="1_qrj8o"]
+
+[sub_resource type="Curve2D" id="Curve2D_lo4mw"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 147.65776, 0, 0, 0, 0, 0, 133.89305, 55, 0, 0, 0, 0, 48.80214, 86, 0, 0, 0, 0, -23.775402, 71, 0, 0, 0, 0, -62.566845, 34, 0, 0, 0, 0, -41.294117, -28, 0, 0, 0, 0, 43.79679, -34)
+}
+point_count = 8
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lo4mw"]
+size = Vector2(80, 10)
+
+[node name="CrankPlatform" type="Node2D" unique_id=1779107421]
+script = ExtResource("1_qrj8o")
+time_to_traverse = null
+end_wait_time = null
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1518270955]
+scale = Vector2(0.7991453, 1)
+curve = SubResource("Curve2D_lo4mw")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=643655775]
+rotation = -0.20659071
+rotates = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Path2D/PathFollow2D" unique_id=868672828]
+rotation = 0.20659071
+scale = Vector2(1.251337, 1)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/StaticBody2D" unique_id=588167541]
+shape = SubResource("RectangleShape2D_lo4mw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D/StaticBody2D" unique_id=1889980038]

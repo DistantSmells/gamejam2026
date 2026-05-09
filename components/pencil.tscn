@@ -9,7 +9,7 @@
 radius = 1.8
 height = 40.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_5sv77"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vobv5"]
 resource_local_to_scene = true
 shader = ExtResource("2_qtbbt")
 shader_parameter/color = Color(1, 1, 1, 1)
@@ -34,7 +34,7 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_qtbbt")
 
 [node name="Sprite2D" parent="." index="1" unique_id=420557678]
-material = SubResource("ShaderMaterial_5sv77")
+material = SubResource("ShaderMaterial_vobv5")
 texture = ExtResource("3_qtbbt")
 
 [node name="CollisionShape2D" parent="Pickable" parent_id_path=PackedInt32Array(141324948) index="0" unique_id=583126960]

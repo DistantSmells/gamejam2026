@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bjrqqh3te1688"]
 
-[ext_resource type="Texture2D" uid="uid://be7l8c2n103eq" path="res://assets/art/grabbing cursor.png" id="1_1pxpd"]
-[ext_resource type="Texture2D" uid="uid://e2k50w4w03hs" path="res://assets/art/default cursor.png" id="1_3oqqw"]
+[ext_resource type="Texture2D" uid="uid://dn0y68gp6jxar" path="res://assets/art/grabbing cursor 1.png" id="1_1pxpd"]
 [ext_resource type="Script" uid="uid://b4s6w1khw3i2g" path="res://scripts/cursor.gd" id="1_f7wah"]
+[ext_resource type="Texture2D" uid="uid://cnlpfv5bxox1h" path="res://assets/art/default cursor 1.png" id="2_0t8ko"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f7wah"]
 animations = [{
@@ -16,7 +16,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_3oqqw")
+"texture": ExtResource("2_0t8ko")
 }],
 "loop": true,
 "name": &"Open",
@@ -28,7 +28,7 @@ process_mode = 3
 z_index = 100
 scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_f7wah")
-animation = &"Open"
+animation = &"Closed"
 offset = Vector2(3, 3)
 flip_h = true
 script = ExtResource("1_f7wah")

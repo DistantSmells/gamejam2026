@@ -8,41 +8,41 @@
 [ext_resource type="PackedScene" uid="uid://focj2udki44v" path="res://scenes/cage.tscn" id="6_qfnet"]
 [ext_resource type="PackedScene" uid="uid://146l5fidjgkx" path="res://scenes/pause_menu.tscn" id="7_i7141"]
 [ext_resource type="PackedScene" uid="uid://bjrqqh3te1688" path="res://components/cursor.tscn" id="9_7r4gi"]
-[ext_resource type="PackedScene" uid="uid://0g6ykmt47e4q" path="res://scenes/pencil.tscn" id="10_e3hyu"]
 [ext_resource type="PackedScene" uid="uid://cdfd2iktpbuoo" path="res://components/ruler.tscn" id="10_w7kh3"]
-[ext_resource type="PackedScene" path="res://components/table.tscn" id="11_q5onr"]
+[ext_resource type="PackedScene" uid="uid://dxgakwf0r6ib1" path="res://components/table.tscn" id="11_q5onr"]
 [ext_resource type="PackedScene" uid="uid://dqwhipmq04uol" path="res://components/hitbox.tscn" id="12_jhx03"]
+[ext_resource type="PackedScene" uid="uid://27upa388dayc" path="res://components/book_3.tscn" id="14_dss4m"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q5onr"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o8fc1"]
 resource_local_to_scene = true
-size = Vector2(160, 90)
+size = Vector2(122.5, 84.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xo05s"]
+resource_local_to_scene = true
+size = Vector2(240, 200)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jhx03"]
-resource_local_to_scene = true
-size = Vector2(594, 120)
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_q5onr"]
+size = Vector2(100, 20)
 
 [node name="World" type="Node2D" unique_id=724757792]
 script = ExtResource("1_2tsk8")
 
 [node name="Player" parent="." unique_id=1553788574 instance=ExtResource("2_rwgxs")]
-position = Vector2(47, 149)
+position = Vector2(139, 154)
 collision_mask = 6
 
 [node name="CameraZone" parent="." unique_id=1477006201 instance=ExtResource("5_71j4m")]
-position = Vector2(80, 134)
+position = Vector2(175, 133)
 zoom_target = 2.0
 
 [node name="CollisionShape2D" parent="CameraZone" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_q5onr")
+shape = SubResource("RectangleShape2D_o8fc1")
 
-[node name="CameraZone2" parent="." unique_id=1803974424 instance=ExtResource("5_71j4m")]
-position = Vector2(261, 119)
+[node name="CameraZone2" parent="." unique_id=420631450 instance=ExtResource("5_71j4m")]
+position = Vector2(357, 111)
 
 [node name="CollisionShape2D" parent="CameraZone2" index="0" unique_id=260718912]
-position = Vector2(196, -1)
-shape = SubResource("RectangleShape2D_jhx03")
+shape = SubResource("RectangleShape2D_xo05s")
 
 [node name="Camera2D" parent="." unique_id=1606371719 node_paths=PackedStringArray("target", "current_boundary") instance=ExtResource("4_k0juu")]
 position = Vector2(47, 28)
@@ -50,7 +50,7 @@ target = NodePath("../Player")
 current_boundary = NodePath("../CameraZone")
 
 [node name="Cage" parent="." unique_id=2134776975 instance=ExtResource("6_qfnet")]
-position = Vector2(107, 154)
+position = Vector2(210, 143)
 
 [node name="Main Menu" parent="." unique_id=770710148 instance=ExtResource("3_4wyf3")]
 
@@ -61,40 +61,29 @@ layer = 2
 
 [node name="Cursor" parent="Mouse" unique_id=2098125822 instance=ExtResource("9_7r4gi")]
 
-[node name="Pencil" parent="." unique_id=1177728474 instance=ExtResource("10_e3hyu")]
-position = Vector2(277, 40)
-
-[node name="Pencil2" parent="." unique_id=1707308476 instance=ExtResource("10_e3hyu")]
-position = Vector2(283, 55)
-
-[node name="Pencil3" parent="." unique_id=1640443263 instance=ExtResource("10_e3hyu")]
-position = Vector2(264, 24)
-
 [node name="Ruler" parent="." unique_id=1557476 instance=ExtResource("10_w7kh3")]
-position = Vector2(237, 168)
-
-[node name="Ruler2" parent="." unique_id=574998798 instance=ExtResource("10_w7kh3")]
-position = Vector2(476, 168)
-
-[node name="Ruler3" parent="." unique_id=1306397971 instance=ExtResource("10_w7kh3")]
-position = Vector2(477, -10)
+position = Vector2(295, 168)
 
 [node name="table1" parent="." unique_id=172784535 instance=ExtResource("11_q5onr")]
 position = Vector2(224, 237)
-collision_layer = 2
-collision_mask = 0
 
 [node name="table2" parent="." unique_id=890730072 instance=ExtResource("11_q5onr")]
 position = Vector2(510, 237)
-collision_layer = 2
-collision_mask = 0
 
 [node name="Hitbox" parent="." unique_id=1047647142 instance=ExtResource("12_jhx03")]
-position = Vector2(357, 213)
+position = Vector2(369, 205)
 
 [node name="CollisionShape2D" parent="Hitbox" index="0" unique_id=687741460]
-position = Vector2(9, 0)
-shape = SubResource("WorldBoundaryShape2D_q5onr")
+shape = SubResource("RectangleShape2D_jhx03")
+
+[node name="Book3" parent="." unique_id=1177728474 instance=ExtResource("14_dss4m")]
+position = Vector2(541, 89)
+
+[node name="Book4" parent="." unique_id=1440730567 instance=ExtResource("14_dss4m")]
+position = Vector2(493, 94)
+
+[node name="Book5" parent="." unique_id=1656103422 instance=ExtResource("14_dss4m")]
+position = Vector2(510, 51)
 
 [connection signal="died" from="Player" to="." method="_on_player_died"]
 [connection signal="main_menu_freed" from="Main Menu" to="." method="_on_main_menu_main_menu_freed"]

@@ -1,0 +1,331 @@
+[gd_scene format=3 uid="uid://cvwvsp3ovr2vp"]
+
+[ext_resource type="Script" uid="uid://bfwryw204mgqp" path="res://scripts/stompy_feet.gd" id="1_xk35p"]
+[ext_resource type="Texture2D" uid="uid://bcxut33nhswkb" path="res://assets/art/Leg.png" id="2_dosku"]
+[ext_resource type="PackedScene" uid="uid://dqwhipmq04uol" path="res://components/hitbox.tscn" id="3_4arcv"]
+
+[sub_resource type="Animation" id="Animation_n0bal"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LegL:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-35, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LegL:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StompL:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(-0.033333335),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LegR:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(35, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("LegR:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("StompR:emitting")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("LegL/HitboxL/CollisionShape2D:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("LegR/HitboxR/CollisionShape2D:disabled")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_4arcv"]
+resource_name = "StompL"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LegL:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(0.42044783, 0.119937964, 1),
+"update": 0,
+"values": [Vector2(-35, 0), Vector2(-35, -40), Vector2(-35, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LegL:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(0.42044783, 0.119937964, 1),
+"update": 0,
+"values": [0.0, 0.17453292, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StompL:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.23),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LegL/HitboxL/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_yv2hh"]
+resource_name = "StompR"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LegR:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(0.42044818, 0.12074234, 1),
+"update": 0,
+"values": [Vector2(35, 0), Vector2(35, -40), Vector2(35, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LegR:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(0.42044818, 0.12074234, 1),
+"update": 0,
+"values": [0.0, -0.17453292, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StompR:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.23),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LegR/HitboxR/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n0bal"]
+_data = {
+&"RESET": SubResource("Animation_n0bal"),
+&"StompL": SubResource("Animation_4arcv"),
+&"StompR": SubResource("Animation_yv2hh")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4arcv"]
+height = 36.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n0bal"]
+radius = 8.0
+height = 60.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yv2hh"]
+height = 36.0
+
+[sub_resource type="Curve" id="Curve_4arcv"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.5899471, 0.8333333), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_4arcv"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[node name="StompyFeet" type="Node2D" unique_id=1513668594]
+script = ExtResource("1_xk35p")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1308487097]
+libraries/ = SubResource("AnimationLibrary_n0bal")
+autoplay = &"StompL"
+
+[node name="LegL" type="Sprite2D" parent="." unique_id=42993182]
+position = Vector2(-35, 0)
+texture = ExtResource("2_dosku")
+flip_h = true
+
+[node name="HitboxL" parent="LegL" unique_id=1047647142 instance=ExtResource("3_4arcv")]
+position = Vector2(-5, 57)
+
+[node name="CollisionShape2D" parent="LegL/HitboxL" index="0" unique_id=687741460]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_4arcv")
+
+[node name="FootL" type="StaticBody2D" parent="LegL" unique_id=830465395]
+position = Vector2(-5, 57)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LegL/FootL" unique_id=497697929]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_4arcv")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="LegL/FootL" unique_id=436506551]
+position = Vector2(11, -41)
+shape = SubResource("CapsuleShape2D_n0bal")
+
+[node name="LegR" type="Sprite2D" parent="." unique_id=302097513]
+position = Vector2(35, 0)
+texture = ExtResource("2_dosku")
+
+[node name="HitboxR" parent="LegR" unique_id=859822716 instance=ExtResource("3_4arcv")]
+position = Vector2(5, 57)
+
+[node name="CollisionShape2D" parent="LegR/HitboxR" index="0" unique_id=687741460]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_yv2hh")
+
+[node name="FoorR" type="StaticBody2D" parent="LegR" unique_id=744625219]
+position = Vector2(5, 57)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LegR/FoorR" unique_id=664373500]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_4arcv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="LegR/FoorR" unique_id=495583226]
+position = Vector2(-11, -41)
+shape = SubResource("CapsuleShape2D_n0bal")
+
+[node name="StompL" type="CPUParticles2D" parent="." unique_id=383019297]
+position = Vector2(-40, 70)
+emitting = false
+amount = 200
+one_shot = true
+speed_scale = 2.0
+explosiveness = 1.0
+randomness = 0.3
+lifetime_randomness = 0.7
+emission_shape = 3
+emission_rect_extents = Vector2(8, 1)
+direction = Vector2(0, -1)
+spread = 70.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 120.0
+scale_amount_curve = SubResource("Curve_4arcv")
+color_ramp = SubResource("Gradient_4arcv")
+
+[node name="StompR" type="CPUParticles2D" parent="." unique_id=1268618650]
+position = Vector2(40, 70)
+emitting = false
+amount = 200
+one_shot = true
+speed_scale = 2.0
+explosiveness = 1.0
+randomness = 0.3
+lifetime_randomness = 0.7
+emission_shape = 3
+emission_rect_extents = Vector2(8, 1)
+direction = Vector2(0, -1)
+spread = 70.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 120.0
+scale_amount_curve = SubResource("Curve_4arcv")
+color_ramp = SubResource("Gradient_4arcv")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+
+[editable path="LegL/HitboxL"]
+[editable path="LegR/HitboxR"]
