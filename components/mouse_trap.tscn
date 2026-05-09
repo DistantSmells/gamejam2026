@@ -1,21 +1,7 @@
-<<<<<<< HEAD
 [gd_scene format=3 uid="uid://b5fw5t7dsgp6m"]
 
 [ext_resource type="Texture2D" uid="uid://ffql6ioisqnc" path="res://assets/art/Mouse trap animation.png" id="1_ndwav"]
 [ext_resource type="Script" uid="uid://c47bqcs5y6j1n" path="res://scripts/mouse_trap.gd" id="2_xg4a2"]
-=======
-<<<<<<< Updated upstream
-[gd_scene format=3 uid="uid://b5fw5t7dsgp6m"]
-
-[ext_resource type="Texture2D" path="res://assets/art/Mouse trap animation.png" id="1_ndwav"]
-[ext_resource type="Script" path="res://mouse_trap.gd" id="2_xg4a2"]
-=======
-[gd_scene format=3 uid="uid://dedrypk7qrpbd"]
-
-[ext_resource type="Texture2D" uid="uid://ffql6ioisqnc" path="res://assets/art/Mouse trap animation.png" id="1_ndwav"]
-[ext_resource type="Script" uid="uid://b6re5dqj17lpl" path="res://mouse_trap.gd" id="2_xg4a2"]
->>>>>>> Stashed changes
->>>>>>> 1261c9e896a5c6abc622ebb81f773cff1a3f1e4c
 [ext_resource type="PackedScene" uid="uid://dqwhipmq04uol" path="res://components/hitbox.tscn" id="3_d0gfr"]
 [ext_resource type="PackedScene" uid="uid://be334xo25m6uf" path="res://components/trigger_box.tscn" id="4_2ljom"]
 
