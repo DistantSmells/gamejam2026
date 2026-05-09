@@ -6,6 +6,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_japfg"]
 size = Vector2(130, 20)
 
+[sub_resource type="Curve2D" id="Curve2D_japfg"]
+
 [node name="PaperPlanes" type="Node2D" unique_id=1423839741]
 script = ExtResource("1_i5bwk")
 
@@ -28,5 +30,8 @@ texture = ExtResource("2_japfg")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fan/AOE" unique_id=904443093]
 shape = SubResource("RectangleShape2D_japfg")
 
-[connection signal="timeout" from="RespawnTimer" to="." method="_on_respawn_timer_timeout"]
-[connection signal="timeout" from="DeletionTimer" to="." method="_on_deletion_timer_timeout"]
+[node name="Falling" type="Path2D" parent="." unique_id=1297442287]
+curve = SubResource("Curve2D_japfg")
+
+[node name="Flying" type="Path2D" parent="." unique_id=411361277]
+curve = SubResource("Curve2D_japfg")

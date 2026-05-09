@@ -19,10 +19,11 @@ func _physics_process(delta: float) -> void:
 		var uplift : float = 0.0
 		if plane.global_position.x > ($Fan.global_position.x - ($Fan/AOE/CollisionShape2D.shape.size.x / 2.0)):
 			if plane.global_position.x < ($Fan.global_position.x + ($Fan/AOE/CollisionShape2D.shape.size.x / 2.0)):
-				uplift = (fan_stregth / plane.global_position.distance_to($Fan.global_position))
+				#uplift = (fan_stregth / plane.global_position.distance_to($Fan.global_position))
+				pass
 		#plane_accel[i].y -= uplift * delta
 		#plane_accel[i].y += plane_gravity * delta
-		plane_velocity[i] += plane_accel[i] 
+		#plane_velocity[i] += plane_accel[i] 
 		plane_velocity[i].y -= uplift
 		plane.move_and_collide(plane_velocity[i] * delta)
 

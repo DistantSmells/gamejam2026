@@ -1,7 +1,7 @@
 extends Node2D
 
-@export var frequency : float = 1.5
-@onready var pencil = preload("res://components/pencil.tscn")
+@export var frequency : float = 1.0
+@onready var pencil = preload("res://components/thumbtack.tscn")
 @onready var collision: CollisionShape2D = $SpawnArea/CollisionShape2D
 @onready var lower_x = global_position.x - (collision.shape.size.x / 2.0)
 @onready var upper_x = global_position.x + (collision.shape.size.x / 2.0)
@@ -28,7 +28,7 @@ func spawn_pencil() -> void:
 	get_parent().add_child(i_pencil)
 	i_pencil.global_position.x = randf_range(lower_x, upper_x)
 	i_pencil.global_position.y = randf_range(lower_y, upper_y)
-	i_pencil.rotation_degrees = 90
+	i_pencil.rotation_degrees = 180
 	print("Spawned")
 
 func _on_start_triggered() -> void:
