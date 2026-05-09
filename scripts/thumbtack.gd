@@ -13,11 +13,4 @@ func _ready() -> void:
 		sprite.texture = variations[random_index]
 	else:
 		print("Warning: You forgot to drag your tack sprites into the array!")
-
-func _on_dropped():
-	# Small delay to allow it to fall a bit, or check for collision
-	await get_tree().create_timer(0.1).timeout
-	
-	# If it's touching the floor/wall, freeze it so it stays upright
-	if get_contact_count() > 0:
-		freeze = true
+		

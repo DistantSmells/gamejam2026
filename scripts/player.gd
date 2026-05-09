@@ -5,6 +5,8 @@ signal died
 const SPEED = 80.0
 const JUMP_VELOCITY = 200.0
 
+@export var push_force : float = 20.0
+
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var ray_cast_under: RayCast2D = $RayCastUnder
 
@@ -39,6 +41,17 @@ func _physics_process(delta: float) -> void:
 		animated_sprite.flip_h = true
 	
 	move_and_slide()
+	
+	# Iterate through all collisions that happened this frame
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+		
+		# Check if the object we hit is a RigidBody2D
+		if collider is RigidBody2D:
+			# Apply a force based on our velocity
+			var force_direction = -collision.get_normal()
+			collider.apply_impulse(force_direction * push_force)
 
 
 func _on_hurtbox_hit() -> void:

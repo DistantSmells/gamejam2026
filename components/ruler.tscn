@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c5yeg1no3cae5"]
+[gd_scene format=3 uid="uid://cdfd2iktpbuoo"]
 
 [ext_resource type="PackedScene" uid="uid://8sovakvkisrc" path="res://components/mouse_physics_object.tscn" id="1_cofl6"]
 [ext_resource type="Shader" uid="uid://bjkg0y4hmr701" path="res://assets/shaders/Outline.gdshader" id="2_tcawq"]

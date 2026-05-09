@@ -164,15 +164,14 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uapwn"]
 resource_local_to_scene = true
-radius = 7.0
-height = 20.0
+radius = 6.5
+height = 19.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=638494304]
 collision_mask = 2
 script = ExtResource("1_51jd6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=691891870]
-position = Vector2(-0.5, 1)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_51jd6")
 
@@ -181,13 +180,13 @@ sprite_frames = SubResource("SpriteFrames_8pb0k")
 animation = &"guinea walk"
 autoplay = "guinea idle"
 frame_progress = 0.67462766
+offset = Vector2(0.5, -2)
 
 [node name="RayCastUnder" type="RayCast2D" parent="." unique_id=1009612979]
 target_position = Vector2(0, 20)
 collision_mask = 2
 
 [node name="Hurtbox" parent="." unique_id=1346605238 instance=ExtResource("3_uapwn")]
-position = Vector2(0, 1)
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0" unique_id=1934465559]
 rotation = 1.5707964
