@@ -1,26 +1,25 @@
 [gd_scene format=3 uid="uid://bvenjd1lbkptk"]
 
 [ext_resource type="Script" uid="uid://doui80u5g1a8h" path="res://scripts/world.gd" id="1_2tsk8"]
-[ext_resource type="PackedScene" uid="uid://bmk36n1ky8i64" path="res://components/player.tscn" id="2_rwgxs"]
+[ext_resource type="PackedScene" uid="uid://bmk36n1ky8i64" path="res://scenes/player.tscn" id="2_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://cemm6i65inlph" path="res://scenes/main_menu.tscn" id="3_4wyf3"]
 [ext_resource type="PackedScene" uid="uid://ddgsc4edq6rtb" path="res://components/camera_2d.tscn" id="4_k0juu"]
 [ext_resource type="PackedScene" uid="uid://mbbdtwofvb6y" path="res://components/camera_zone.tscn" id="5_71j4m"]
 [ext_resource type="PackedScene" uid="uid://focj2udki44v" path="res://scenes/cage.tscn" id="6_qfnet"]
 [ext_resource type="PackedScene" uid="uid://146l5fidjgkx" path="res://scenes/pause_menu.tscn" id="7_i7141"]
-[ext_resource type="PackedScene" uid="uid://dqwhipmq04uol" path="res://components/hitbox.tscn" id="8_4mrxx"]
 [ext_resource type="PackedScene" uid="uid://bjrqqh3te1688" path="res://components/cursor.tscn" id="9_7r4gi"]
+[ext_resource type="PackedScene" uid="uid://0g6ykmt47e4q" path="res://scenes/pencil.tscn" id="10_e3hyu"]
+[ext_resource type="PackedScene" uid="uid://cdfd2iktpbuoo" path="res://components/ruler.tscn" id="10_w7kh3"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_nnsk1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w7kh3"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4mrxx"]
 resource_local_to_scene = true
 size = Vector2(160, 90)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e3hyu"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7r4gi"]
 resource_local_to_scene = true
 size = Vector2(200, 120)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7r4gi"]
 
 [node name="World" type="Node2D" unique_id=724757792]
 script = ExtResource("1_2tsk8")
@@ -42,13 +41,13 @@ position = Vector2(80, 134)
 zoom_target = 2.0
 
 [node name="CollisionShape2D" parent="CameraZone" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_w7kh3")
+shape = SubResource("RectangleShape2D_4mrxx")
 
 [node name="CameraZone2" parent="." unique_id=1803974424 instance=ExtResource("5_71j4m")]
 position = Vector2(261, 119)
 
 [node name="CollisionShape2D" parent="CameraZone2" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_e3hyu")
+shape = SubResource("RectangleShape2D_7r4gi")
 
 [node name="Camera2D" parent="." unique_id=1606371719 node_paths=PackedStringArray("target", "current_boundary") instance=ExtResource("4_k0juu")]
 position = Vector2(47, 28)
@@ -57,12 +56,6 @@ current_boundary = NodePath("../CameraZone")
 
 [node name="Cage" parent="." unique_id=2134776975 instance=ExtResource("6_qfnet")]
 position = Vector2(107, 154)
-
-[node name="Hitbox" parent="." unique_id=1047647142 instance=ExtResource("8_4mrxx")]
-position = Vector2(255, 165)
-
-[node name="CollisionShape2D" parent="Hitbox" index="0" unique_id=687741460]
-shape = SubResource("RectangleShape2D_7r4gi")
 
 [node name="Main Menu" parent="." unique_id=770710148 instance=ExtResource("3_4wyf3")]
 
@@ -73,9 +66,26 @@ layer = 2
 
 [node name="Cursor" parent="Mouse" unique_id=2098125822 instance=ExtResource("9_7r4gi")]
 
+[node name="Pencil" parent="." unique_id=1177728474 instance=ExtResource("10_e3hyu")]
+position = Vector2(277, 40)
+
+[node name="Pencil2" parent="." unique_id=1707308476 instance=ExtResource("10_e3hyu")]
+position = Vector2(283, 55)
+
+[node name="Pencil3" parent="." unique_id=1640443263 instance=ExtResource("10_e3hyu")]
+position = Vector2(264, 24)
+
+[node name="Ruler" parent="." unique_id=1557476 instance=ExtResource("10_w7kh3")]
+position = Vector2(347, 18)
+
+[node name="Ruler2" parent="." unique_id=574998798 instance=ExtResource("10_w7kh3")]
+position = Vector2(360, 54)
+
+[node name="Ruler3" parent="." unique_id=1306397971 instance=ExtResource("10_w7kh3")]
+position = Vector2(349, 38)
+
 [connection signal="died" from="Player" to="." method="_on_player_died"]
 [connection signal="main_menu_freed" from="Main Menu" to="." method="_on_main_menu_main_menu_freed"]
 
 [editable path="CameraZone"]
 [editable path="CameraZone2"]
-[editable path="Hitbox"]

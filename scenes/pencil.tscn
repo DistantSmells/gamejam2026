@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://0g6ykmt47e4q"]
+
+[ext_resource type="PackedScene" uid="uid://8sovakvkisrc" path="res://components/mouse_physics_object.tscn" id="1_216mr"]
+[ext_resource type="Shader" uid="uid://bjkg0y4hmr701" path="res://assets/shaders/Outline.gdshader" id="2_qtbbt"]
+[ext_resource type="Texture2D" uid="uid://5f1n5haxiao4" path="res://assets/art/Pencil.png" id="3_qtbbt"]
+[ext_resource type="PackedScene" uid="uid://dqwhipmq04uol" path="res://components/hitbox.tscn" id="4_5sv77"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qtbbt"]
+radius = 1.8
+height = 40.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5sv77"]
+resource_local_to_scene = true
+shader = ExtResource("2_qtbbt")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/width = 0.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+shader_parameter/number_of_images = Vector2(1, 1)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5sv77"]
+radius = 2.0
+height = 42.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5sv77"]
+size = Vector2(2, 2)
+
+[node name="Pencil" unique_id=1177728474 instance=ExtResource("1_216mr")]
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=208919183]
+position = Vector2(0, 0.5)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_qtbbt")
+
+[node name="Sprite2D" parent="." index="1" unique_id=420557678]
+material = SubResource("ShaderMaterial_5sv77")
+texture = ExtResource("3_qtbbt")
+
+[node name="CollisionShape2D" parent="Pickable" parent_id_path=PackedInt32Array(141324948) index="0" unique_id=583126960]
+position = Vector2(0, 0.5)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_5sv77")
+
+[node name="Hitbox" parent="." index="3" unique_id=1047647142 instance=ExtResource("4_5sv77")]
+position = Vector2(20, 0.5)
+
+[node name="CollisionShape2D" parent="Hitbox" index="0" unique_id=687741460]
+shape = SubResource("RectangleShape2D_5sv77")
+
+[editable path="Pickable"]
+[editable path="Hitbox"]

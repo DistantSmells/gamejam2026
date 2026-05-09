@@ -6,6 +6,9 @@ extends RigidBody2D
 var is_held = false
 var grab_offset := Vector2.ZERO
 var prev_gloval_mouse_pos := Vector2.ZERO
+enum ForceType {ALL, TORQUE}
+@export var type : ForceType = ForceType.ALL
+
 #const STIFFNESS := 600.0
 #const DAMPING := 20.0
 const SPEED = 30.0
@@ -16,7 +19,7 @@ const MOMENT_ARM_COEFFICIENT : float = 0.8
 
 func _process(delta: float) -> void:
 	if $Pickable.hovered and not self.is_held:
-		$Sprite2D.material.set_shader_parameter("width", 2.0)
+		$Sprite2D.material.set_shader_parameter("width", 1.0)
 	else:
 		$Sprite2D.material.set_shader_parameter("width", 0.0)
 
@@ -29,8 +32,12 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	##var grab_world_pos = global_transform * grab_offset
 	var grab_world_pos = to_global(grab_offset)
 	var global_mouse_pos = get_global_mouse_position()
-	var displacement = global_mouse_pos - grab_world_pos
-	state.linear_velocity = displacement * SPEED
+	if type == ForceType.ALL:
+		var displacement = global_mouse_pos - grab_world_pos
+		state.linear_velocity = displacement * SPEED
+	if type == ForceType.TORQUE:
+		var displacement = global_mouse_pos - grab_world_pos
+		state.linear_velocity = displacement * 0.2
 	#state.angular_velocity *= (1.0 - ANGULAR_DAMPING * state.step)
 	
 	# Gravity torque around grab point
