@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://hki22mf8p8mp"]
+
+[ext_resource type="Script" uid="uid://dbefy2lmg13c4" path="res://scripts/paper_planes.gd" id="1_i5bwk"]
+[ext_resource type="Texture2D" uid="uid://dt45uvoj1x4l3" path="res://assets/icon.svg" id="2_japfg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_japfg"]
+size = Vector2(100, 500)
+
+[node name="PaperPlanes" type="Node2D" unique_id=1423839741]
+script = ExtResource("1_i5bwk")
+
+[node name="SpawnPoint" type="Node2D" parent="." unique_id=724338301]
+
+[node name="RespawnTimer" type="Timer" parent="." unique_id=11276654]
+wait_time = 8.0
+autostart = true
+
+[node name="DeletionTimer" type="Timer" parent="." unique_id=1250649980]
+wait_time = 20.0
+autostart = true
+
+[node name="Fan" type="Sprite2D" parent="." unique_id=177797039]
+scale = Vector2(0.6, 0.1)
+texture = ExtResource("2_japfg")
+
+[node name="AOE" type="Area2D" parent="Fan" unique_id=792612447]
+position = Vector2(0, -240)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fan/AOE" unique_id=904443093]
+shape = SubResource("RectangleShape2D_japfg")
+
+[connection signal="timeout" from="RespawnTimer" to="." method="_on_respawn_timer_timeout"]
+[connection signal="timeout" from="DeletionTimer" to="." method="_on_deletion_timer_timeout"]

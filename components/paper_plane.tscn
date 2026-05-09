@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://xgecelsapqrx"]
+
+[ext_resource type="Texture2D" uid="uid://bojfr7lcyejtv" path="res://assets/art/Paper plane.png" id="1_hxoar"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hxoar"]
+radius = 2.0
+height = 74.0
+
+[node name="PaperPlane" type="AnimatableBody2D" unique_id=1809133464]
+z_index = -1
+collision_layer = 2
+collision_mask = 3
+constant_linear_velocity = Vector2(1, 1)
+sync_to_physics = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=262622880]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_hxoar")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1510694740]
+texture = ExtResource("1_hxoar")
+flip_h = true
