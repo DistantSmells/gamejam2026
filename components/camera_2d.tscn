@@ -6,6 +6,7 @@
 size = Vector2(10, 180)
 
 [node name="Camera2D" type="Camera2D" unique_id=1606371719]
+zoom = Vector2(1.4, 1.4)
 limit_smoothed = true
 position_smoothing_enabled = true
 script = ExtResource("1_3nkou")

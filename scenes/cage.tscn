@@ -1,0 +1,155 @@
+[gd_scene format=3 uid="uid://focj2udki44v"]
+
+[ext_resource type="Texture2D" uid="uid://fwhrcf8j7mlc" path="res://assets/Art/cage bg.png" id="1_qqn5r"]
+[ext_resource type="Texture2D" uid="uid://bknmwc5ino35m" path="res://assets/Art/cage door.png" id="2_pw5cj"]
+[ext_resource type="Texture2D" uid="uid://cjsh5icuh5yen" path="res://assets/Art/cage foreground.png" id="3_f6fro"]
+[ext_resource type="Texture2D" uid="uid://dne0ymh8hq7ue" path="res://assets/Art/cage pin.png" id="4_uihcc"]
+[ext_resource type="PackedScene" uid="uid://8sovakvkisrc" path="res://components/mouse_physics_object.tscn" id="5_0cbc7"]
+[ext_resource type="Shader" uid="uid://bjkg0y4hmr701" path="res://assets/shaders/Outline.gdshader" id="6_pg1wr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pg1wr"]
+size = Vector2(3.74, 18)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pg1wr"]
+resource_local_to_scene = true
+shader = ExtResource("6_pg1wr")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/width = 0.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+shader_parameter/number_of_images = Vector2(1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vafpy"]
+size = Vector2(6, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l2c6p"]
+size = Vector2(11.5, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ujwbq"]
+size = Vector2(2, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_af1gf"]
+size = Vector2(10, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p6q3i"]
+size = Vector2(2, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tsfju"]
+size = Vector2(2, 2)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pg1wr"]
+radius = 2.0
+height = 25.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jaqrq"]
+size = Vector2(99, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1krpw"]
+size = Vector2(100, 4)
+
+[node name="Cage" type="Node2D" unique_id=2134776975]
+
+[node name="CageBg" type="Sprite2D" parent="." unique_id=1906210588]
+z_index = -1
+texture_filter = 1
+texture = ExtResource("1_qqn5r")
+
+[node name="CageForeground" type="Sprite2D" parent="." unique_id=1371161856]
+z_index = 1
+texture = ExtResource("3_f6fro")
+
+[node name="Pin" parent="." unique_id=1177728474 instance=ExtResource("5_0cbc7")]
+position = Vector2(10, -6)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" parent="Pin" index="0" unique_id=208919183]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_pg1wr")
+
+[node name="Sprite2D" parent="Pin" index="1" unique_id=420557678]
+material = SubResource("ShaderMaterial_pg1wr")
+texture = ExtResource("4_uihcc")
+offset = Vector2(-11, 6)
+
+[node name="CollisionShape2D" parent="Pin/Pickable" parent_id_path=PackedInt32Array(1177728474, 141324948) index="0" unique_id=583126960]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_vafpy")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Pin" unique_id=114813033]
+position = Vector2(-0.25, -8)
+shape = SubResource("RectangleShape2D_l2c6p")
+
+[node name="Right" type="StaticBody2D" parent="." unique_id=1469308907]
+position = Vector2(3, -20)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right" unique_id=2004254017]
+shape = SubResource("RectangleShape2D_ujwbq")
+
+[node name="Left" type="StaticBody2D" parent="." unique_id=294090402]
+position = Vector2(-100, -14)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left" unique_id=922952832]
+shape = SubResource("RectangleShape2D_af1gf")
+
+[node name="LatchEdges" type="Node2D" parent="." unique_id=1175087789]
+
+[node name="Left" type="StaticBody2D" parent="LatchEdges" unique_id=1455094880]
+position = Vector2(6, -10)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LatchEdges/Left" unique_id=899708528]
+shape = SubResource("RectangleShape2D_p6q3i")
+
+[node name="Right" type="StaticBody2D" parent="LatchEdges" unique_id=1129196586]
+position = Vector2(13, -10)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LatchEdges/Right" unique_id=247243753]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_tsfju")
+
+[node name="Door" type="RigidBody2D" parent="." unique_id=1974182198]
+position = Vector2(3, 7)
+rotation = 0.079589814
+collision_layer = 2
+collision_mask = 2
+
+[node name="CageDoor" type="Sprite2D" parent="Door" unique_id=1685436797]
+texture = ExtResource("2_pw5cj")
+offset = Vector2(-6, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=1199328402]
+position = Vector2(0.475, -1.015)
+shape = SubResource("CapsuleShape2D_pg1wr")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="." unique_id=1608118317]
+position = Vector2(3, 20)
+node_a = NodePath("../Bottom")
+node_b = NodePath("../Door")
+
+[node name="Bottom" type="StaticBody2D" parent="." unique_id=962696779]
+position = Vector2(-43, 23)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom" unique_id=1832771798]
+shape = SubResource("RectangleShape2D_jaqrq")
+
+[node name="Top" type="StaticBody2D" parent="." unique_id=1566970793]
+position = Vector2(-45, -32)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Top" unique_id=1835031219]
+shape = SubResource("RectangleShape2D_1krpw")
+
+[editable path="Pin"]
+[editable path="Pin/Pickable"]
