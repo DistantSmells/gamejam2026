@@ -162,7 +162,7 @@ animations = [{
 "speed": 12.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uapwn"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhqgy"]
 resource_local_to_scene = true
 radius = 6.5
 height = 19.0
@@ -180,7 +180,7 @@ sprite_frames = SubResource("SpriteFrames_8pb0k")
 animation = &"guinea walk"
 autoplay = "guinea idle"
 frame_progress = 0.67462766
-offset = Vector2(0.5, -2)
+offset = Vector2(0.5, -1)
 
 [node name="RayCastUnder" type="RayCast2D" parent="." unique_id=1009612979]
 target_position = Vector2(0, 20)
@@ -190,7 +190,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0" unique_id=1934465559]
 rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_uapwn")
+shape = SubResource("CapsuleShape2D_qhqgy")
 
 [connection signal="hit" from="Hurtbox" to="." method="_on_hurtbox_hit"]
 

@@ -15,7 +15,7 @@ func _on_body_exited(body: Node2D) -> void:
 		emit_signal("camera_zone_exited")
 
 func set_camera_boundaries() -> void:
-	var children = get_parent().get_children()
+	var children = get_parent().get_parent().get_children()
 	for child in children:
 		if child is Camera2D:
 			var size_x = $CollisionShape2D.shape.size.x / 2.0

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cwec888o40e81" path="res://assets/art/Table 1.png" id="1_68ath"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kqa4"]
-size = Vector2(219, 20)
+size = Vector2(219, 18)
 
 [node name="StaticBody2D" type="StaticBody2D" unique_id=172784535]
 collision_layer = 2
@@ -13,5 +13,5 @@ collision_mask = 2
 texture = ExtResource("1_68ath")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=77206100]
-position = Vector2(-0.5, -53)
+position = Vector2(0, -52)
 shape = SubResource("RectangleShape2D_1kqa4")
