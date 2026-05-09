@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 func _ready() -> void:
-	hide() # Start hidden
+	hide() # Is hidden at the start
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"): # Usually the "Esc" key

@@ -7,7 +7,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_05uyy"]
 resource_local_to_scene = true
 shader = ExtResource("2_nwcfo")
-shader_parameter/lod = 2.000000095
+shader_parameter/lod = 2.50000011875
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hdmo1"]
 bg_color = Color(0.3054463, 0.3054462, 0.3054462, 1)
