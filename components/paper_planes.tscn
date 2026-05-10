@@ -1,37 +1,69 @@
 [gd_scene format=3 uid="uid://hki22mf8p8mp"]
 
 [ext_resource type="Script" uid="uid://dbefy2lmg13c4" path="res://scripts/paper_planes.gd" id="1_i5bwk"]
-[ext_resource type="Texture2D" uid="uid://dt45uvoj1x4l3" path="res://assets/icon.svg" id="2_japfg"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_japfg"]
-size = Vector2(130, 20)
+[ext_resource type="Texture2D" uid="uid://cn8bsqmw8opht" path="res://assets/art/Fan/static fan back.png" id="2_nhrab"]
+[ext_resource type="Texture2D" uid="uid://dw2bgc4l1syej" path="res://assets/art/Fan/blades1.png" id="4_lei1w"]
+[ext_resource type="Texture2D" uid="uid://diod7o28kkuer" path="res://assets/art/Fan/static fan front.png" id="4_vqx6f"]
+[ext_resource type="Texture2D" uid="uid://4bfvpp7gg7er" path="res://assets/art/Fan/blades2.png" id="5_qruo7"]
+[ext_resource type="Texture2D" uid="uid://c2u8mi81du6h7" path="res://assets/art/Fan/blades3.png" id="6_c4itw"]
+[ext_resource type="PackedScene" uid="uid://xgecelsapqrx" path="res://components/paper_plane.tscn" id="7_qruo7"]
 
 [sub_resource type="Curve2D" id="Curve2D_japfg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -20, -139, 0, 0, 0, 0, 68.154236, -141.13063, 0, 0, 0, 0, 104.46863, -147.63817, 0, 0, 0, 0, 133, -158.79395, 0, 0, 0, 0, 158, -173, 0, 0, 0, 0, 176, -208, 0, 0, 0, 0, 165, -237, 0, 0, 0, 0, 148, -257, 0, 0, 0, 0, 120, -271.28137, 0, 0, 0, 0, 51, -275.92963, 0, 0, 0, 0, 5, -275, 0, 0, 0, 0, -44, -275, 0, 0, 0, 0, -77, -277, 0, 0, 0, 0, -126.91217, -268.49243, 0, 0, 0, 0, -148.13696, -258.2663, 0, 0, 0, 0, -168.35114, -246.18088, 0, 0, 0, 0, -171.38324, -206.206, 0, 0, 0, 0, -167.3404, -185.75374, 0, 0, 0, 0, -151.16913, -162.51254, 0, 0, 0, 0, -111.751526, -143.91957, 0, 0, 0, 0, -20.787964, -139.27133)
+}
+point_count = 21
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1rkhb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_lei1w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qruo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_c4itw")
+}],
+"loop": true,
+"name": &"On",
+"speed": 8.0
+}]
 
 [node name="PaperPlanes" type="Node2D" unique_id=1423839741]
 script = ExtResource("1_i5bwk")
 
-[node name="SpawnPoint" type="Node2D" parent="." unique_id=724338301]
-
-[node name="RespawnTimer" type="Timer" parent="." unique_id=11276654]
-wait_time = 8.0
-autostart = true
-
-[node name="DeletionTimer" type="Timer" parent="." unique_id=1250649980]
-wait_time = 20.0
-autostart = true
-
-[node name="Fan" type="Sprite2D" parent="." unique_id=177797039]
-scale = Vector2(0.6, 0.1)
-texture = ExtResource("2_japfg")
-
-[node name="AOE" type="Area2D" parent="Fan" unique_id=792612447]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fan/AOE" unique_id=904443093]
-shape = SubResource("RectangleShape2D_japfg")
-
-[node name="Falling" type="Path2D" parent="." unique_id=1297442287]
+[node name="FlightPath" type="Path2D" parent="." unique_id=411361277]
 curve = SubResource("Curve2D_japfg")
 
-[node name="Flying" type="Path2D" parent="." unique_id=411361277]
-curve = SubResource("Curve2D_japfg")
+[node name="PathFollow2D" type="PathFollow2D" parent="FlightPath" unique_id=362389763]
+position = Vector2(-20, -139)
+rotation = -0.024164645
+
+[node name="PathData" type="Node2D" parent="FlightPath/PathFollow2D" unique_id=1678476035]
+
+[node name="FanStatic" type="Node2D" parent="." unique_id=1413816353]
+
+[node name="Back" type="Sprite2D" parent="FanStatic" unique_id=409276060]
+texture = ExtResource("2_nhrab")
+offset = Vector2(-30, -100)
+
+[node name="Blades" type="AnimatedSprite2D" parent="FanStatic" unique_id=103223306]
+sprite_frames = SubResource("SpriteFrames_1rkhb")
+animation = &"On"
+autoplay = "On"
+frame_progress = 0.6000362
+centered = false
+offset = Vector2(-100, -218)
+
+[node name="Front" type="Sprite2D" parent="FanStatic" unique_id=1836290959]
+texture = ExtResource("4_vqx6f")
+offset = Vector2(-30, -100)
+
+[node name="PaperPlane" parent="." unique_id=1809133464 instance=ExtResource("7_qruo7")]
+position = Vector2(-27.051697, -142.06027)
+rotation = -0.021816796
+scale = Vector2(0.99999994, 0.99999994)
+constant_linear_velocity = Vector2(2.83, 0)
+sync_to_physics = false

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://74arpvi02xdu"
-path="res://.godot/imported/rotatable crank.png-90100a5facef25075e787638d4b35bd4.ctex"
+uid="uid://4bfvpp7gg7er"
+path="res://.godot/imported/blades2.png-f8f70ab11c329491ee3a1d80cdf5dc77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/fan/rotatable crank.png"
-dest_files=["res://.godot/imported/rotatable crank.png-90100a5facef25075e787638d4b35bd4.ctex"]
+source_file="res://assets/art/Fan/blades2.png"
+dest_files=["res://.godot/imported/blades2.png-f8f70ab11c329491ee3a1d80cdf5dc77.ctex"]
 
 [params]
 

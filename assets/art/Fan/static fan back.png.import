@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmsbowhwh2tja"
-path="res://.godot/imported/moveable string.png-5665da12c2f99582f5763d47ad909884.ctex"
+uid="uid://cn8bsqmw8opht"
+path="res://.godot/imported/static fan back.png-066b007473bfc8bfe59cd76b55fcac63.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/Pulley system/moveable string.png"
-dest_files=["res://.godot/imported/moveable string.png-5665da12c2f99582f5763d47ad909884.ctex"]
+source_file="res://assets/art/Fan/static fan back.png"
+dest_files=["res://.godot/imported/static fan back.png-066b007473bfc8bfe59cd76b55fcac63.ctex"]
 
 [params]
 

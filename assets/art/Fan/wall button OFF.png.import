@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqqkmok7cv0io"
-path="res://.godot/imported/pulley wheel that rotates.png-60ab4987ce7b854556a15b3bb9986bcf.ctex"
+uid="uid://50ghr1yxqc8l"
+path="res://.godot/imported/wall button OFF.png-e2b2fb6a26ee779a07b6bbbd021d0bfb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/fan/pulley wheel that rotates.png"
-dest_files=["res://.godot/imported/pulley wheel that rotates.png-60ab4987ce7b854556a15b3bb9986bcf.ctex"]
+source_file="res://assets/art/Fan/wall button OFF.png"
+dest_files=["res://.godot/imported/wall button OFF.png-e2b2fb6a26ee779a07b6bbbd021d0bfb.ctex"]
 
 [params]
 

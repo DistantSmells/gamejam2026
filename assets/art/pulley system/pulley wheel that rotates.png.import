@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dji2ug1mcdfur"
-path="res://.godot/imported/pulley wheel that rotates.png-b94955c6d99192a00f62a36c03c24241.ctex"
+path="res://.godot/imported/pulley wheel that rotates.png-e371f63d0f41b984a7a8ecca39d740f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/pulley system/pulley wheel that rotates.png"
-dest_files=["res://.godot/imported/pulley wheel that rotates.png-b94955c6d99192a00f62a36c03c24241.ctex"]
+source_file="res://assets/art/Pulley system/pulley wheel that rotates.png"
+dest_files=["res://.godot/imported/pulley wheel that rotates.png-e371f63d0f41b984a7a8ecca39d740f9.ctex"]
 
 [params]
 

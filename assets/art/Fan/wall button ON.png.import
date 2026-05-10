@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duqji3ykym071"
-path="res://.godot/imported/static part.png-88460a127c7edf208e9ac69772431b5c.ctex"
+uid="uid://h85s3kfanb1t"
+path="res://.godot/imported/wall button ON.png-eb0a8f2b9a3b3e5991bf495be8f16f37.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/fan/static part.png"
-dest_files=["res://.godot/imported/static part.png-88460a127c7edf208e9ac69772431b5c.ctex"]
+source_file="res://assets/art/Fan/wall button ON.png"
+dest_files=["res://.godot/imported/wall button ON.png-eb0a8f2b9a3b3e5991bf495be8f16f37.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jh83ibel8uh"
-path="res://.godot/imported/pulley handle.png-516b482050e7af8794041a8db99c075c.ctex"
+uid="uid://dw2bgc4l1syej"
+path="res://.godot/imported/blades1.png-81645f927dc983d3ca6f2132088c87cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/fan/pulley handle.png"
-dest_files=["res://.godot/imported/pulley handle.png-516b482050e7af8794041a8db99c075c.ctex"]
+source_file="res://assets/art/Fan/blades1.png"
+dest_files=["res://.godot/imported/blades1.png-81645f927dc983d3ca6f2132088c87cf.ctex"]
 
 [params]
 
