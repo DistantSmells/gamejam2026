@@ -16,60 +16,92 @@
 [ext_resource type="PackedScene" uid="uid://d0fetg2ughp0t" path="res://components/meter_ruler.tscn" id="11_lakw3"]
 [ext_resource type="PackedScene" uid="uid://dxgakwf0r6ib1" path="res://components/table.tscn" id="11_q5onr"]
 [ext_resource type="PackedScene" uid="uid://c7enuqgdpyc5n" path="res://components/book_2.tscn" id="12_munwf"]
+[ext_resource type="PackedScene" uid="uid://b5fw5t7dsgp6m" path="res://components/mouse_trap.tscn" id="13_37qwj"]
 [ext_resource type="PackedScene" uid="uid://hki22mf8p8mp" path="res://components/paper_planes.tscn" id="13_jhx03"]
+[ext_resource type="PackedScene" uid="uid://0g6ykmt47e4q" path="res://components/pencil.tscn" id="14_navra"]
 [ext_resource type="PackedScene" uid="uid://bgd77rurymos8" path="res://components/pencil_rain.tscn" id="14_xgqkh"]
 [ext_resource type="Texture2D" uid="uid://douu07qmyfat8" path="res://assets/art/Red chair.png" id="16_dss4m"]
 [ext_resource type="PackedScene" uid="uid://cvwvsp3ovr2vp" path="res://components/stompy_feet.tscn" id="16_ts3gi"]
 [ext_resource type="Texture2D" uid="uid://b1k5gvt0vgic6" path="res://assets/art/Bag.png" id="17_7t5mc"]
+[ext_resource type="PackedScene" uid="uid://dkd4vfxlynymh" path="res://components/crank_platform.tscn" id="19_luhhm"]
 [ext_resource type="Texture2D" uid="uid://cpktfmc7gmk66" path="res://assets/art/wall texture.png" id="19_pm21f"]
 [ext_resource type="Texture2D" uid="uid://1lec00b5tmtq" path="res://assets/art/multiplocation table poster.png" id="20_2lf6f"]
+[ext_resource type="Texture2D" uid="uid://t67ql358uifr" path="res://assets/art/Pulley system/tray.png" id="20_fh13f"]
 [ext_resource type="Texture2D" uid="uid://dirx7jlqllve4" path="res://assets/art/handpaint art 1.png" id="21_7iits"]
+[ext_resource type="Texture2D" uid="uid://dji2ug1mcdfur" path="res://assets/art/Pulley system/pulley wheel that rotates.png" id="21_rup4s"]
+[ext_resource type="Texture2D" uid="uid://d2m2sldn78m1b" path="res://assets/art/Pulley system/pulley handle.png" id="22_4kbfs"]
 [ext_resource type="Texture2D" uid="uid://dks3xo2r3jdlo" path="res://assets/art/handpaint art 2.png" id="22_oo54l"]
 [ext_resource type="Texture2D" uid="uid://b48taelh77h01" path="res://assets/art/wall jut.png" id="23_ctatt"]
 [ext_resource type="Texture2D" uid="uid://u76n87t8wobb" path="res://assets/art/carpet FRONT.png" id="23_kpybi"]
 [ext_resource type="Texture2D" uid="uid://b68ryjhnrohdv" path="res://assets/art/carpet BEHIND.png" id="25_0nbtd"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_37qwj"]
-resource_local_to_scene = true
-size = Vector2(124, 100)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_navra"]
-resource_local_to_scene = true
-size = Vector2(240, 200)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_luhhm"]
-resource_local_to_scene = true
-size = Vector2(200, 200)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fh13f"]
-resource_local_to_scene = true
-size = Vector2(300, 300)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rup4s"]
-resource_local_to_scene = true
-size = Vector2(160, 160)
+[ext_resource type="Texture2D" uid="uid://djjpkoor3be1c" path="res://assets/art/Handpaint art 3.png" id="31_f17e3"]
+[ext_resource type="Texture2D" uid="uid://qfts61c4wxur" path="res://assets/art/window fram.png" id="36_x2olw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4kbfs"]
 resource_local_to_scene = true
-size = Vector2(200, 300)
+size = Vector2(124, 100)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f17e3"]
 resource_local_to_scene = true
-size = Vector2(200, 300)
+size = Vector2(240, 200)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x2olw"]
 resource_local_to_scene = true
-size = Vector2(369, 170)
+size = Vector2(200, 200)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_817gm"]
 resource_local_to_scene = true
+size = Vector2(300, 300)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ggc52"]
+resource_local_to_scene = true
+size = Vector2(160, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l8ah6"]
+resource_local_to_scene = true
+size = Vector2(200, 300)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e75v4"]
+resource_local_to_scene = true
+size = Vector2(200, 300)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8u370"]
+resource_local_to_scene = true
+size = Vector2(369, 170)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rga7q"]
+resource_local_to_scene = true
 size = Vector2(200, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6oujy"]
+resource_local_to_scene = true
+size = Vector2(220, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eo1xk"]
+resource_local_to_scene = true
+size = Vector2(217, 240)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1jxku"]
+resource_local_to_scene = true
+size = Vector2(400, 400)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2lf6f"]
 size = Vector2(20, 100)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hi6a0"]
+size = Vector2(219, 10)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7iits"]
 size = Vector2(100, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4wdv8"]
+size = Vector2(20, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d46x8"]
+size = Vector2(20, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3l05q"]
+size = Vector2(40, 100)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3hyu"]
 size = Vector2(140, 20)
@@ -83,7 +115,7 @@ size = Vector2(80, 80)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kpybi"]
 size = Vector2(80, 20)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ggc52"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_18clu"]
 resource_local_to_scene = true
 size = Vector2(160, 10)
 
@@ -91,7 +123,9 @@ size = Vector2(160, 10)
 size = Vector2(20, 68)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0nbtd"]
-size = Vector2(20, 65)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6oujy"]
+load_path = "res://.godot/imported/static part.png-e78d9bdf33507cc3cfec2165950df27b.ctex"
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ctatt"]
 
@@ -105,59 +139,79 @@ position = Vector2(61, 60)
 zoom_target = 2.0
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_37qwj")
+shape = SubResource("RectangleShape2D_4kbfs")
 
 [node name="CameraZone2" parent="Camera Zones" unique_id=420631450 instance=ExtResource("5_71j4m")]
 position = Vector2(248, 14)
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone2" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_navra")
+shape = SubResource("RectangleShape2D_f17e3")
 
 [node name="CameraZone3" parent="Camera Zones" unique_id=568418688 instance=ExtResource("5_71j4m")]
 position = Vector2(477, 14)
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone3" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_luhhm")
+shape = SubResource("RectangleShape2D_x2olw")
 
 [node name="CameraZone4" parent="Camera Zones" unique_id=1516872610 instance=ExtResource("5_71j4m")]
 position = Vector2(737, 64)
 zoom_target = 0.7
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone4" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_fh13f")
+shape = SubResource("RectangleShape2D_817gm")
 
 [node name="CameraZone5" parent="Camera Zones" unique_id=143177495 instance=ExtResource("5_71j4m")]
 position = Vector2(970, 32)
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone5" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_rup4s")
+shape = SubResource("RectangleShape2D_ggc52")
 
 [node name="CameraZone6" parent="Camera Zones" unique_id=718994838 instance=ExtResource("5_71j4m")]
 position = Vector2(1155, 78)
 zoom_target = 0.8
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone6" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_4kbfs")
+shape = SubResource("RectangleShape2D_l8ah6")
 
 [node name="CameraZone7" parent="Camera Zones" unique_id=1787307846 instance=ExtResource("5_71j4m")]
 position = Vector2(1365, 78)
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone7" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_f17e3")
+shape = SubResource("RectangleShape2D_e75v4")
 
 [node name="CameraZone8" parent="Camera Zones" unique_id=1333763030 instance=ExtResource("5_71j4m")]
 position = Vector2(1654, 143)
 zoom_target = 1.4
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone8" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_x2olw")
+shape = SubResource("RectangleShape2D_8u370")
 
 [node name="CameraZone9" parent="Camera Zones" unique_id=269533332 instance=ExtResource("5_71j4m")]
 position = Vector2(1945, 128)
 zoom_target = 1.5
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone9" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_817gm")
+shape = SubResource("RectangleShape2D_rga7q")
+
+[node name="CameraZone10" parent="Camera Zones" unique_id=1919868481 instance=ExtResource("5_71j4m")]
+position = Vector2(2160, 129)
+zoom_target = 1.5
+
+[node name="CollisionShape2D" parent="Camera Zones/CameraZone10" index="0" unique_id=260718912]
+shape = SubResource("RectangleShape2D_6oujy")
+
+[node name="CameraZone11" parent="Camera Zones" unique_id=368969267 instance=ExtResource("5_71j4m")]
+position = Vector2(2443, 109)
+
+[node name="CollisionShape2D" parent="Camera Zones/CameraZone11" index="0" unique_id=260718912]
+position = Vector2(-61.5, 0)
+shape = SubResource("RectangleShape2D_eo1xk")
+
+[node name="CameraZone12" parent="Camera Zones" unique_id=1392184364 instance=ExtResource("5_71j4m")]
+position = Vector2(2693, 28)
+
+[node name="CollisionShape2D" parent="Camera Zones/CameraZone12" index="0" unique_id=260718912]
+shape = SubResource("RectangleShape2D_1jxku")
 
 [node name="Static Props" type="Node2D" parent="." unique_id=174376346]
 
@@ -191,6 +245,18 @@ position = Vector2(1539, 154)
 [node name="table7" parent="Static Props" unique_id=129105574 instance=ExtResource("11_q5onr")]
 position = Vector2(1730, 154)
 
+[node name="table8" parent="Static Props" unique_id=325008337 instance=ExtResource("11_q5onr")]
+position = Vector2(2156, 154)
+
+[node name="table9" parent="Static Props" unique_id=451240686 instance=ExtResource("11_q5onr")]
+position = Vector2(2382, 154)
+collision_mask = 0
+
+[node name="CollisionShape2D" parent="Static Props/table9" index="1" unique_id=77206100]
+position = Vector2(0, -56)
+shape = SubResource("RectangleShape2D_hi6a0")
+one_way_collision = true
+
 [node name="Cage" parent="Static Props" unique_id=2134776975 instance=ExtResource("6_qfnet")]
 position = Vector2(96, 60)
 
@@ -223,6 +289,43 @@ collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Static Props/Bag/StaticBody2D" unique_id=1805783264]
 polygon = PackedVector2Array(-8.5, -37, 18.5, -29, 22.5, -23, 23.5, -12, 33.5, -2, 41.5, 13, 44.5, 27, 34.5, 43, 12.5, 44, -5.5, 45, -13.5, 44, -24.5, -33, -17.5, -37)
+
+[node name="CrankPlatformBlock" type="StaticBody2D" parent="Static Props" unique_id=1647832657]
+position = Vector2(2265, 50)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Static Props/CrankPlatformBlock" unique_id=571560410]
+shape = SubResource("RectangleShape2D_4wdv8")
+
+[node name="CrankPlatformBlock2" type="StaticBody2D" parent="Static Props" unique_id=50272228]
+position = Vector2(2482, 188)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Static Props/CrankPlatformBlock2" unique_id=1800422492]
+shape = SubResource("RectangleShape2D_d46x8")
+
+[node name="WindowFrame" type="Sprite2D" parent="Static Props" unique_id=72908857]
+position = Vector2(2513, 50)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("36_x2olw")
+
+[node name="WindowBottom" type="StaticBody2D" parent="Static Props/WindowFrame" unique_id=1468710741]
+position = Vector2(2.5, 85.83333)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Static Props/WindowFrame/WindowBottom" unique_id=1853542954]
+shape = SubResource("RectangleShape2D_3l05q")
+
+[node name="WindowTop" type="StaticBody2D" parent="Static Props/WindowFrame" unique_id=253719390]
+position = Vector2(2.5, -78.33333)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Static Props/WindowFrame/WindowTop" unique_id=2092529724]
+shape = SubResource("RectangleShape2D_3l05q")
 
 [node name="Dynamic Props" type="Node2D" parent="." unique_id=781546276]
 
@@ -259,6 +362,12 @@ rotation = 1.8325958
 position = Vector2(1627, 210)
 rotation = 1.5707964
 mass = 2.0
+
+[node name="MouseTrap" parent="Dynamic Props" unique_id=983163397 instance=ExtResource("13_37qwj")]
+position = Vector2(2135, 226)
+
+[node name="Pencil" parent="Dynamic Props" unique_id=737304536 instance=ExtResource("14_navra")]
+position = Vector2(2198, 205)
 
 [node name="Hitbox" type="Node2D" parent="." unique_id=2130723426]
 
@@ -316,7 +425,7 @@ wait_time = 10.0
 position = Vector2(1730, 118)
 
 [node name="CollisionShape2D" parent="Systems/PencilRain/SpawnArea" parent_id_path=PackedInt32Array(2133244290, 329061949) index="0" unique_id=570417173]
-shape = SubResource("RectangleShape2D_ggc52")
+shape = SubResource("RectangleShape2D_18clu")
 
 [node name="Start" parent="Systems/PencilRain" index="2" unique_id=1398177743]
 position = Vector2(-142, 98)
@@ -335,10 +444,38 @@ shape = SubResource("RectangleShape2D_0nbtd")
 [node name="StompyFeet" parent="Systems" unique_id=1513668594 instance=ExtResource("16_ts3gi")]
 position = Vector2(1945, 161)
 
+[node name="CrankStaticArt" type="Sprite2D" parent="Systems" unique_id=2026786158]
+position = Vector2(2355, 114)
+texture = SubResource("CompressedTexture2D_6oujy")
+
+[node name="CrankPlatform" parent="Systems" unique_id=1779107421 instance=ExtResource("19_luhhm")]
+position = Vector2(2355, 114)
+
+[node name="Path2D" parent="Systems/CrankPlatform" index="0" unique_id=1518270955]
+position = Vector2(-18, 109)
+scale = Vector2(1, 0.9300699)
+
+[node name="Sprite2D" parent="Systems/CrankPlatform/Path2D/PathFollow2D/Platform" parent_id_path=PackedInt32Array(1779107421, 868672828) index="1" unique_id=1889980038]
+texture = ExtResource("20_fh13f")
+
+[node name="Crank" parent="Systems/CrankPlatform" index="1" unique_id=2089513801]
+position = Vector2(45.999992, 80)
+rotation = 1.5603243
+texture = ExtResource("21_rup4s")
+offset = Vector2(1.425, -4.15)
+
+[node name="Handle" parent="Systems/CrankPlatform/Crank/Path2D/PathFollow2D/Pickable" parent_id_path=PackedInt32Array(1779107421, 141324948) index="1" unique_id=1374606022]
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("22_4kbfs")
+offset = Vector2(-13.5, -4.5)
+
+[node name="Line2D" parent="Systems/CrankPlatform/Crank" index="1" unique_id=1857967972]
+visible = false
+
 [node name="Camera2D" parent="." unique_id=1606371719 node_paths=PackedStringArray("target", "current_boundary") instance=ExtResource("4_k0juu")]
 position = Vector2(852, 32)
 target = NodePath("../Player")
-current_boundary = NodePath("../Camera Zones/CameraZone3")
+current_boundary = NodePath("../Camera Zones/CameraZone11")
 
 [node name="Main Menu" parent="." unique_id=770710148 instance=ExtResource("3_4wyf3")]
 
@@ -374,6 +511,10 @@ texture = ExtResource("21_7iits")
 position = Vector2(1133, 45)
 texture = ExtResource("22_oo54l")
 
+[node name="HandpaintArt3" type="Sprite2D" parent="ParallaxBackground/BackWall" unique_id=1795564463]
+position = Vector2(2533, 50)
+texture = ExtResource("31_f17e3")
+
 [node name="Mid" type="ParallaxLayer" parent="ParallaxBackground" unique_id=605703365]
 position = Vector2(331, 48)
 motion_mirroring = Vector2(620, 0)
@@ -406,7 +547,7 @@ collision_mask = 0
 shape = SubResource("WorldBoundaryShape2D_ctatt")
 
 [node name="Player" parent="." unique_id=1553788574 instance=ExtResource("2_rwgxs")]
-position = Vector2(541, 37)
+position = Vector2(2308, 170)
 collision_mask = 6
 
 [connection signal="main_menu_freed" from="Main Menu" to="." method="_on_main_menu_main_menu_freed"]
@@ -421,6 +562,10 @@ collision_mask = 6
 [editable path="Camera Zones/CameraZone7"]
 [editable path="Camera Zones/CameraZone8"]
 [editable path="Camera Zones/CameraZone9"]
+[editable path="Camera Zones/CameraZone10"]
+[editable path="Camera Zones/CameraZone11"]
+[editable path="Camera Zones/CameraZone12"]
+[editable path="Static Props/table9"]
 [editable path="Hitbox/Hitbox"]
 [editable path="Hitbox/Hitbox2"]
 [editable path="Hitbox/Hitbox3"]
@@ -431,3 +576,5 @@ collision_mask = 6
 [editable path="Systems/PencilRain"]
 [editable path="Systems/PencilRain/Start"]
 [editable path="Systems/PencilRain/Stop"]
+[editable path="Systems/CrankPlatform"]
+[editable path="Systems/CrankPlatform/Crank/Path2D/PathFollow2D/Pickable"]

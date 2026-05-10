@@ -47,6 +47,7 @@ position = Vector2(20, 0.5)
 
 [node name="CollisionShape2D" parent="Hitbox" index="0" unique_id=687741460]
 shape = SubResource("RectangleShape2D_5sv77")
+disabled = true
 
 [editable path="Pickable"]
 [editable path="Hitbox"]

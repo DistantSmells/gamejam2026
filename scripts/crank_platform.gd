@@ -6,6 +6,7 @@ extends Node2D
 
 @export var crank_ratio : float = 0.1
 @export var decay_velocity : float = 20.0
+@export var radius : float = 16.0
 var is_held : bool = false
 @onready var platform_path_follow = $Path2D/PathFollow2D
 @onready var crank_path_follow = $Crank/Path2D/PathFollow2D
@@ -15,7 +16,7 @@ var prev_mouse_pos : Vector2 = Vector2.ZERO
 func _ready() -> void:
 	var curve = Curve2D.new()
 	var line = PackedVector2Array()
-	var radius = 200.0
+	
 	var num_points = 20  # more = smoother
 
 	for i in (num_points + 1):
@@ -58,8 +59,10 @@ func _process(delta: float) -> void:
 		var prev_angle = (prev_mouse_pos - center).angle()
 		var curr_angle = (get_global_mouse_position() - center).angle()
 		var angle_delta = angle_difference(prev_angle, curr_angle)
+		#Quick fix for crank direction
 		crank_path_follow.progress_ratio += angle_delta / TAU
 		prev_mouse_pos = get_global_mouse_position()
+		#$Crank.rotation += angle_delta / TAU
 		
 		#Update Linear Path
 		platform_path_follow.progress_ratio += angle_delta / TAU * crank_ratio
