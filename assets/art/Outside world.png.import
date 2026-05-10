@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmsbowhwh2tja"
-path="res://.godot/imported/moveable string.png-5665da12c2f99582f5763d47ad909884.ctex"
+uid="uid://cykcpn86fnv10"
+path="res://.godot/imported/Outside world.png-37470234c9ad84f87fad763785bd4d8c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/Pulley system/moveable string.png"
-dest_files=["res://.godot/imported/moveable string.png-5665da12c2f99582f5763d47ad909884.ctex"]
+source_file="res://assets/art/Outside world.png"
+dest_files=["res://.godot/imported/Outside world.png-37470234c9ad84f87fad763785bd4d8c.ctex"]
 
 [params]
 
