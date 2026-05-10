@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://b0xso3n7hj6k7"]
+
+[ext_resource type="Script" uid="uid://cbckpwwlsxvfu" path="res://scripts/dialogue_box.gd" id="1_tm68y"]
+[ext_resource type="Texture2D" uid="uid://dlpx62ihffgbg" path="res://assets/art/dialogue box 1.png" id="2_hvmm2"]
+[ext_resource type="FontFile" uid="uid://j7fyf61roql4" path="res://assets/fonts/lorekerper/LoreKerper.ttf" id="3_p0wdv"]
+
+[node name="Dialogue box" type="Control" unique_id=1136646949]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_tm68y")
+
+[node name="Container" type="MarginContainer" parent="." unique_id=1122661959]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Container" unique_id=1704352207]
+layout_mode = 2
+texture = ExtResource("2_hvmm2")
+
+[node name="MarginContainer" type="MarginContainer" parent="Container" unique_id=1902408079]
+custom_minimum_size = Vector2(170, 40)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 40
+
+[node name="Label" type="Label" parent="Container/MarginContainer" unique_id=1793791647]
+modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(130, 30)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("3_p0wdv")
+theme_override_font_sizes/font_size = 12
+text = " "
+vertical_alignment = 1
+autowrap_mode = 3
