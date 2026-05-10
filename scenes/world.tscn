@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cux827h12xdl3" path="res://components/thumbtack.tscn" id="7_o8fc1"]
 [ext_resource type="PackedScene" uid="uid://27upa388dayc" path="res://components/book_3.tscn" id="8_xo05s"]
 [ext_resource type="PackedScene" uid="uid://bjrqqh3te1688" path="res://components/cursor.tscn" id="9_7r4gi"]
-[ext_resource type="PackedScene" uid="uid://d0fetg2ughp0t" path="res://components/meter_ruler.tscn" id="11_lakw3"]
+[ext_resource type="PackedScene" path="res://components/meter_ruler.tscn" id="11_lakw3"]
 [ext_resource type="PackedScene" uid="uid://dxgakwf0r6ib1" path="res://components/table.tscn" id="11_q5onr"]
 [ext_resource type="PackedScene" uid="uid://c7enuqgdpyc5n" path="res://components/book_2.tscn" id="12_munwf"]
 [ext_resource type="PackedScene" uid="uid://b5fw5t7dsgp6m" path="res://components/mouse_trap.tscn" id="13_37qwj"]
@@ -27,9 +27,10 @@
 [ext_resource type="Texture2D" uid="uid://cpktfmc7gmk66" path="res://assets/art/wall texture.png" id="19_pm21f"]
 [ext_resource type="Texture2D" uid="uid://1lec00b5tmtq" path="res://assets/art/multiplocation table poster.png" id="20_2lf6f"]
 [ext_resource type="Texture2D" uid="uid://dstcywhxc3uni" path="res://assets/art/Pulley system/tray.png" id="20_fh13f"]
+[ext_resource type="Texture2D" uid="uid://t67ql358uifr" path="res://assets/art/pulley system/tray.png" id="20_fh13f"]
 [ext_resource type="Texture2D" uid="uid://dirx7jlqllve4" path="res://assets/art/handpaint art 1.png" id="21_7iits"]
-[ext_resource type="Texture2D" uid="uid://dji2ug1mcdfur" path="res://assets/art/Pulley system/pulley wheel that rotates.png" id="21_rup4s"]
-[ext_resource type="Texture2D" uid="uid://d2m2sldn78m1b" path="res://assets/art/Pulley system/pulley handle.png" id="22_4kbfs"]
+[ext_resource type="Texture2D" uid="uid://dji2ug1mcdfur" path="res://assets/art/pulley system/pulley wheel that rotates.png" id="21_rup4s"]
+[ext_resource type="Texture2D" uid="uid://d2m2sldn78m1b" path="res://assets/art/pulley system/pulley handle.png" id="22_4kbfs"]
 [ext_resource type="Texture2D" uid="uid://dks3xo2r3jdlo" path="res://assets/art/handpaint art 2.png" id="22_oo54l"]
 [ext_resource type="Texture2D" uid="uid://b48taelh77h01" path="res://assets/art/wall jut.png" id="23_ctatt"]
 [ext_resource type="Texture2D" uid="uid://u76n87t8wobb" path="res://assets/art/carpet FRONT.png" id="23_kpybi"]
@@ -125,7 +126,6 @@ size = Vector2(20, 68)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0nbtd"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6oujy"]
-load_path = "res://.godot/imported/static part.png-e78d9bdf33507cc3cfec2165950df27b.ctex"
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ctatt"]
 
@@ -475,7 +475,7 @@ visible = false
 [node name="Camera2D" parent="." unique_id=1606371719 node_paths=PackedStringArray("target", "current_boundary") instance=ExtResource("4_k0juu")]
 position = Vector2(852, 32)
 target = NodePath("../Player")
-current_boundary = NodePath("../Camera Zones/CameraZone11")
+current_boundary = NodePath("../Camera Zones/CameraZone")
 
 [node name="Main Menu" parent="." unique_id=770710148 instance=ExtResource("3_4wyf3")]
 
@@ -547,7 +547,7 @@ collision_mask = 0
 shape = SubResource("WorldBoundaryShape2D_ctatt")
 
 [node name="Player" parent="." unique_id=1553788574 instance=ExtResource("2_rwgxs")]
-position = Vector2(2308, 170)
+position = Vector2(37, 52)
 collision_mask = 6
 
 [connection signal="main_menu_freed" from="Main Menu" to="." method="_on_main_menu_main_menu_freed"]

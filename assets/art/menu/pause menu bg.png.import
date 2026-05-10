@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2d516rljpds7"
-path="res://.godot/imported/guinea pigs pause menun.png-6c980d77f4f8127c0d8b3e9036ef1ae8.ctex"
+uid="uid://gej5yhlap2uq"
+path="res://.godot/imported/pause menu bg.png-f49466edba73c6c53290f6b757c01d9d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/pause menu/guinea pigs pause menun.png"
-dest_files=["res://.godot/imported/guinea pigs pause menun.png-6c980d77f4f8127c0d8b3e9036ef1ae8.ctex"]
+source_file="res://assets/art/menu/pause menu bg.png"
+dest_files=["res://.godot/imported/pause menu bg.png-f49466edba73c6c53290f6b757c01d9d.ctex"]
 
 [params]
 

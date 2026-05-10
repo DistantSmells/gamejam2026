@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hqp3h03n85r"
-path="res://.godot/imported/moveable string.png-f43d96eabb8da1e70069d35ee3e5e554.ctex"
+uid="uid://d0veh6s1dwnq3"
+path="res://.godot/imported/quit button.png-f72870cc3d242b904b3a67ec0e4e1924.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/pulley system/moveable string.png"
-dest_files=["res://.godot/imported/moveable string.png-f43d96eabb8da1e70069d35ee3e5e554.ctex"]
+source_file="res://assets/art/menu/quit button.png"
+dest_files=["res://.godot/imported/quit button.png-f72870cc3d242b904b3a67ec0e4e1924.ctex"]
 
 [params]
 
