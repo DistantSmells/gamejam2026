@@ -17,7 +17,7 @@ func play_music(music_path: String):
 	music_player.stream = stream
 	music_player.play()
 
-func play_sfx(sfx_path: String, volume_db: float = 0.0):
+func play_sfx(sfx_path: String, volume_db: float = 0.0, pitch: float = 1.0):
 	var stream = load(sfx_path)
 	var sfx_player = AudioStreamPlayer.new()
 	add_child(sfx_player)
@@ -25,5 +25,6 @@ func play_sfx(sfx_path: String, volume_db: float = 0.0):
 	sfx_player.stream = stream
 	sfx_player.bus = sfx_bus
 	sfx_player.volume_db = volume_db  # This controls the loudness
+	sfx_player.pitch_scale = pitch
 	sfx_player.play()
 	sfx_player.finished.connect(sfx_player.queue_free)

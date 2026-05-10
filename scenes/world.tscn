@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://dkd4vfxlynymh" path="res://components/crank_platform.tscn" id="19_luhhm"]
 [ext_resource type="Texture2D" uid="uid://cpktfmc7gmk66" path="res://assets/art/wall texture.png" id="19_pm21f"]
 [ext_resource type="Texture2D" uid="uid://1lec00b5tmtq" path="res://assets/art/multiplocation table poster.png" id="20_2lf6f"]
+[ext_resource type="Texture2D" uid="uid://dstcywhxc3uni" path="res://assets/art/Pulley system/tray.png" id="20_fh13f"]
 [ext_resource type="Texture2D" uid="uid://t67ql358uifr" path="res://assets/art/pulley system/tray.png" id="20_fh13f"]
 [ext_resource type="Texture2D" uid="uid://dirx7jlqllve4" path="res://assets/art/handpaint art 1.png" id="21_7iits"]
 [ext_resource type="Texture2D" uid="uid://dji2ug1mcdfur" path="res://assets/art/pulley system/pulley wheel that rotates.png" id="21_rup4s"]

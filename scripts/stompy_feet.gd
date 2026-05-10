@@ -9,3 +9,8 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 		$AnimationPlayer.play("StompR")
 	if anim_name == "StompR":
 		$AnimationPlayer.play("StompL")
+
+func play_stomp_sound() -> void:
+	# Play stomp
+	AudioManager.play_sfx("res://assets/sounds/stomp_cropped.wav")
+	

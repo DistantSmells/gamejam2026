@@ -64,6 +64,9 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 		#)
 
 func _on_pickable_grabbed() -> void:
+	# Play click sound effect
+	AudioManager.play_sfx("res://assets/sounds/click.ogg")
+
 	is_held = true
 	#anchor = AnimatableBody2D.new()
 	#anchor.sync_to_physics = true
