@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0veh6s1dwnq3"
-path="res://.godot/imported/quit button.png-8a6fcc4a897f2a7311c11d1a77b100a9.ctex"
+uid="uid://bf5natvttt4gg"
+path="res://.godot/imported/dummy slider bar.png-7ed5be7339a06ef4262e3b1b1290cbbd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/pause menu/quit button.png"
-dest_files=["res://.godot/imported/quit button.png-8a6fcc4a897f2a7311c11d1a77b100a9.ctex"]
+source_file="res://assets/art/menu/dummy slider bar.png"
+dest_files=["res://.godot/imported/dummy slider bar.png-7ed5be7339a06ef4262e3b1b1290cbbd.ctex"]
 
 [params]
 
