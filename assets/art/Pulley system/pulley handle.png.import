@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2m2sldn78m1b"
-path="res://.godot/imported/pulley handle.png-31198298850fbf43cc86e7506ab41e1e.ctex"
+path="res://.godot/imported/pulley handle.png-dcf07f9c0eeadbff296c34ca08ba5c60.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/pulley system/pulley handle.png"
-dest_files=["res://.godot/imported/pulley handle.png-31198298850fbf43cc86e7506ab41e1e.ctex"]
+source_file="res://assets/art/Pulley system/pulley handle.png"
+dest_files=["res://.godot/imported/pulley handle.png-dcf07f9c0eeadbff296c34ca08ba5c60.ctex"]
 
 [params]
 
