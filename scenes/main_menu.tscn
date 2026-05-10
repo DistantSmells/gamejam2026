@@ -2,11 +2,18 @@
 
 [ext_resource type="Script" uid="uid://x1ojs6svb4b1" path="res://scripts/main_menu.gd" id="1_l6cm7"]
 [ext_resource type="Shader" uid="uid://h0okc2471w7p" path="res://assets/shaders/blur.gdshader" id="2_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://duq8r3uveve65" path="res://assets/art/menu/Main menu bg.png" id="3_rtw2f"]
+[ext_resource type="Texture2D" uid="uid://doyjbey5i27nt" path="res://assets/art/menu/Play button.png" id="4_rtw2f"]
+[ext_resource type="Texture2D" uid="uid://d0veh6s1dwnq3" path="res://assets/art/menu/quit button.png" id="4_wu84c"]
+[ext_resource type="Texture2D" uid="uid://c2d516rljpds7" path="res://assets/art/menu/guinea pigs pause menun.png" id="6_tbmy8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bqqt6"]
 resource_local_to_scene = true
 shader = ExtResource("2_ekxnf")
 shader_parameter/lod = 1.0000000475
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ln24"]
+bg_color = Color(1, 1, 1, 0)
 
 [node name="Main Menu" type="CanvasLayer" unique_id=770710148]
 process_mode = 3
@@ -27,26 +34,51 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -21.0
-offset_top = -33.0
-offset_right = 21.0
-offset_bottom = 33.0
+offset_left = -223.0
+offset_top = -134.0
+offset_right = 222.0
+offset_bottom = 152.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="CenterContainer" unique_id=1609755209]
+[node name="background" type="Sprite2D" parent="CenterContainer" unique_id=154005284]
+position = Vector2(221, 127)
+scale = Vector2(0.94, 0.94)
+texture = ExtResource("3_rtw2f")
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer" unique_id=981221098]
+layout_direction = 1
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ln24")
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/PanelContainer" unique_id=1609755209]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/MarginContainer" unique_id=1077911305]
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer" unique_id=1077911305]
 layout_mode = 2
 
-[node name="Play" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=1978289762]
+[node name="Play" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1978289762]
 layout_mode = 2
 text = "Play"
+flat = true
 
-[node name="Quit" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=610571029]
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Play" unique_id=1794054046]
+position = Vector2(20, 18)
+texture = ExtResource("4_rtw2f")
+
+[node name="Quit" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=610571029]
 layout_mode = 2
 text = "Quit"
+flat = true
 
-[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Quit" unique_id=1969694093]
+position = Vector2(20, -6)
+texture = ExtResource("4_wu84c")
+
+[node name="GuineaPigsPauseMenun" type="Sprite2D" parent="." unique_id=2085990608]
+position = Vector2(158, 95)
+texture = ExtResource("6_tbmy8")
+
+[connection signal="pressed" from="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

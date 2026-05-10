@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2848pvnwbbom"
-path="res://.godot/imported/resume button.png-055dcd9b3197033169136200f4eaaf1d.ctex"
+uid="uid://irdtfs0ew8cn"
+path="res://.godot/imported/audio icon.png-24470bdae4aec90d095e45db6833eee4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/pause menu/resume button.png"
-dest_files=["res://.godot/imported/resume button.png-055dcd9b3197033169136200f4eaaf1d.ctex"]
+source_file="res://assets/art/menu/audio icon.png"
+dest_files=["res://.godot/imported/audio icon.png-24470bdae4aec90d095e45db6833eee4.ctex"]
 
 [params]
 
