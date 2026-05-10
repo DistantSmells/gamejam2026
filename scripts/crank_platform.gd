@@ -33,6 +33,8 @@ func _ready() -> void:
 		$Crank/Path2D.curve = curve
 		$Crank/Line2D.points = line
 
+var sound_threshold : float = 0.0  # Tracks distance moved for sound triggers
+
 func _process(delta: float) -> void:
 	#CRANK PATH CODE...
 	if is_held:
@@ -63,6 +65,22 @@ func _process(delta: float) -> void:
 		crank_path_follow.progress_ratio += angle_delta / TAU
 		prev_mouse_pos = get_global_mouse_position()
 		#$Crank.rotation += angle_delta / TAU
+		
+		# --- SOUND LOGIC START ---
+		if abs(angle_delta) > 0.01: # Only play if the mouse actually moved
+			sound_threshold += abs(angle_delta)
+			
+			# Play a sound every time the crank turns about 15 degrees (0.26 radians)
+			if sound_threshold > 0.26:
+				# Calculate pitch based on speed (angle_delta / delta)
+				# This makes it sound "faster" when you spin faster!
+				var speed = abs(angle_delta) / delta
+				var pitch_val = clamp(1.0 + (speed * 0.05), 0.8, 2.5)
+				
+				AudioManager.play_sfx("res://assets/sounds/crank.wav", -10.0, pitch_val)
+				sound_threshold = 0.0 # Reset threshold
+		# --- SOUND LOGIC END ---
+		
 		
 		#Update Linear Path
 		platform_path_follow.progress_ratio += angle_delta / TAU * crank_ratio

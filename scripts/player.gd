@@ -33,6 +33,8 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = -JUMP_VELOCITY
 		animated_sprite.play("guinea jump buildup")
+		# PLAY JUMP SOUND
+		AudioManager.play_sfx("res://assets/sounds/jump.wav", -6)
 
 	# Sprite flip
 	if direction > 0:
@@ -55,6 +57,12 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_hurtbox_hit() -> void:
+	# 1. Play the explosion sound immediately
+	# We use a negative volume (e.g., -5.0) so it doesn't clip/distort
+	AudioManager.play_sfx("res://assets/sounds/explosion.wav", -5.0)
+	
+	# 2. Play the chirp as a "final squeak" (Optional but cute)
+	AudioManager.play_sfx("res://assets/sounds/gunea_pig_chirp.mp3", 0.0)
 	self.hide()
 	var particles = CPUParticles2D.new()
 	particles.one_shot = true
