@@ -2,7 +2,13 @@
 
 [ext_resource type="Script" uid="uid://buslsymc6fjje" path="res://scripts/pause_menu.gd" id="1_hdmo1"]
 [ext_resource type="Shader" uid="uid://h0okc2471w7p" path="res://assets/shaders/blur.gdshader" id="2_nwcfo"]
+[ext_resource type="Texture2D" uid="uid://gej5yhlap2uq" path="res://assets/art/pause menu/pause menu bg.png" id="3_5d2l8"]
 [ext_resource type="FontFile" uid="uid://j7fyf61roql4" path="res://assets/fonts/lorekerper/LoreKerper.ttf" id="3_kukqi"]
+[ext_resource type="Texture2D" uid="uid://c2d516rljpds7" path="res://assets/art/pause menu/guinea pigs pause menun.png" id="4_1s2dm"]
+[ext_resource type="Texture2D" uid="uid://irdtfs0ew8cn" path="res://assets/art/pause menu/audio icon.png" id="5_knqa7"]
+[ext_resource type="Texture2D" uid="uid://bf5natvttt4gg" path="res://assets/art/pause menu/dummy slider bar.png" id="6_71k7c"]
+[ext_resource type="Texture2D" uid="uid://2848pvnwbbom" path="res://assets/art/pause menu/resume button.png" id="6_88e76"]
+[ext_resource type="Texture2D" uid="uid://d0veh6s1dwnq3" path="res://assets/art/pause menu/quit button.png" id="7_knqa7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_05uyy"]
 resource_local_to_scene = true
@@ -49,6 +55,26 @@ grow_vertical = 2
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_hdmo1")
 
+[node name="background" type="Sprite2D" parent="CenterContainer/PanelContainer" unique_id=1985075989]
+position = Vector2(54.500004, 51)
+scale = Vector2(0.9260355, 0.94514775)
+texture = ExtResource("3_5d2l8")
+
+[node name="guinea pigs" type="Sprite2D" parent="CenterContainer/PanelContainer" unique_id=1893707887]
+z_index = 1
+position = Vector2(53.5, 56)
+scale = Vector2(0.99999994, 1)
+texture = ExtResource("4_1s2dm")
+
+[node name="audio button" type="Sprite2D" parent="CenterContainer/PanelContainer" unique_id=806796554]
+position = Vector2(60.5, 47)
+scale = Vector2(1.0769231, 1)
+texture = ExtResource("5_knqa7")
+
+[node name="dummy audio bar" type="Sprite2D" parent="CenterContainer/PanelContainer" unique_id=1235144395]
+position = Vector2(56.5, 47)
+texture = ExtResource("6_71k7c")
+
 [node name="MarginContainer" type="MarginContainer" parent="CenterContainer/PanelContainer" unique_id=1820066292]
 layout_mode = 2
 theme_override_constants/margin_left = 10
@@ -62,17 +88,29 @@ layout_mode = 2
 [node name="Label" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1624754478]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_kukqi")
-text = "Game Paused"
+text = "   Paused    "
 
 [node name="ResumeButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=878469028]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_kukqi")
 text = "Resume"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ResumeButton" unique_id=156549405]
+position = Vector2(41.5, 18)
+scale = Vector2(1.0059172, 1)
+texture = ExtResource("6_88e76")
 
 [node name="QuitButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=612328607]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_kukqi")
 text = "Quit"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/QuitButton" unique_id=301949408]
+position = Vector2(41.5, -10)
+scale = Vector2(1.0769231, 1)
+texture = ExtResource("7_knqa7")
 
 [connection signal="pressed" from="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
