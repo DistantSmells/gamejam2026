@@ -3,6 +3,9 @@ extends Node2D
 var can_pause = false
 var block_input : bool = false
 
+func _ready():
+	AudioManager.play_music("res://assets/sounds/bg_music_2.mp3")
+
 func reload_level() -> void:
 	pass
 

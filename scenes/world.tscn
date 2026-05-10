@@ -26,7 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://dkd4vfxlynymh" path="res://components/crank_platform.tscn" id="19_luhhm"]
 [ext_resource type="Texture2D" uid="uid://cpktfmc7gmk66" path="res://assets/art/wall texture.png" id="19_pm21f"]
 [ext_resource type="Texture2D" uid="uid://1lec00b5tmtq" path="res://assets/art/multiplocation table poster.png" id="20_2lf6f"]
-[ext_resource type="Texture2D" uid="uid://t67ql358uifr" path="res://assets/art/Pulley system/tray.png" id="20_fh13f"]
+[ext_resource type="Texture2D" uid="uid://dstcywhxc3uni" path="res://assets/art/Pulley system/tray.png" id="20_fh13f"]
 [ext_resource type="Texture2D" uid="uid://dirx7jlqllve4" path="res://assets/art/handpaint art 1.png" id="21_7iits"]
 [ext_resource type="Texture2D" uid="uid://dji2ug1mcdfur" path="res://assets/art/Pulley system/pulley wheel that rotates.png" id="21_rup4s"]
 [ext_resource type="Texture2D" uid="uid://d2m2sldn78m1b" path="res://assets/art/Pulley system/pulley handle.png" id="22_4kbfs"]
@@ -37,47 +37,47 @@
 [ext_resource type="Texture2D" uid="uid://djjpkoor3be1c" path="res://assets/art/Handpaint art 3.png" id="31_f17e3"]
 [ext_resource type="Texture2D" uid="uid://qfts61c4wxur" path="res://assets/art/window fram.png" id="36_x2olw"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4kbfs"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2olw"]
 resource_local_to_scene = true
 size = Vector2(124, 100)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f17e3"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_817gm"]
 resource_local_to_scene = true
 size = Vector2(240, 200)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2olw"]
-resource_local_to_scene = true
-size = Vector2(200, 200)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_817gm"]
-resource_local_to_scene = true
-size = Vector2(300, 300)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ggc52"]
 resource_local_to_scene = true
-size = Vector2(160, 160)
+size = Vector2(200, 200)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l8ah6"]
 resource_local_to_scene = true
-size = Vector2(200, 300)
+size = Vector2(300, 300)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e75v4"]
 resource_local_to_scene = true
-size = Vector2(200, 300)
+size = Vector2(160, 160)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8u370"]
 resource_local_to_scene = true
-size = Vector2(369, 170)
+size = Vector2(200, 300)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rga7q"]
 resource_local_to_scene = true
-size = Vector2(200, 200)
+size = Vector2(200, 300)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6oujy"]
 resource_local_to_scene = true
-size = Vector2(220, 200)
+size = Vector2(369, 170)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eo1xk"]
+resource_local_to_scene = true
+size = Vector2(200, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_18clu"]
+resource_local_to_scene = true
+size = Vector2(220, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x28ej"]
 resource_local_to_scene = true
 size = Vector2(217, 240)
 
@@ -115,7 +115,7 @@ size = Vector2(80, 80)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kpybi"]
 size = Vector2(80, 20)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_18clu"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1dgkn"]
 resource_local_to_scene = true
 size = Vector2(160, 10)
 
@@ -139,73 +139,73 @@ position = Vector2(61, 60)
 zoom_target = 2.0
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_4kbfs")
+shape = SubResource("RectangleShape2D_x2olw")
 
 [node name="CameraZone2" parent="Camera Zones" unique_id=420631450 instance=ExtResource("5_71j4m")]
 position = Vector2(248, 14)
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone2" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_f17e3")
+shape = SubResource("RectangleShape2D_817gm")
 
 [node name="CameraZone3" parent="Camera Zones" unique_id=568418688 instance=ExtResource("5_71j4m")]
 position = Vector2(477, 14)
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone3" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_x2olw")
+shape = SubResource("RectangleShape2D_ggc52")
 
 [node name="CameraZone4" parent="Camera Zones" unique_id=1516872610 instance=ExtResource("5_71j4m")]
 position = Vector2(737, 64)
 zoom_target = 0.7
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone4" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_817gm")
+shape = SubResource("RectangleShape2D_l8ah6")
 
 [node name="CameraZone5" parent="Camera Zones" unique_id=143177495 instance=ExtResource("5_71j4m")]
 position = Vector2(970, 32)
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone5" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_ggc52")
+shape = SubResource("RectangleShape2D_e75v4")
 
 [node name="CameraZone6" parent="Camera Zones" unique_id=718994838 instance=ExtResource("5_71j4m")]
 position = Vector2(1155, 78)
 zoom_target = 0.8
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone6" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_l8ah6")
+shape = SubResource("RectangleShape2D_8u370")
 
 [node name="CameraZone7" parent="Camera Zones" unique_id=1787307846 instance=ExtResource("5_71j4m")]
 position = Vector2(1365, 78)
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone7" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_e75v4")
+shape = SubResource("RectangleShape2D_rga7q")
 
 [node name="CameraZone8" parent="Camera Zones" unique_id=1333763030 instance=ExtResource("5_71j4m")]
 position = Vector2(1654, 143)
 zoom_target = 1.4
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone8" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_8u370")
+shape = SubResource("RectangleShape2D_6oujy")
 
 [node name="CameraZone9" parent="Camera Zones" unique_id=269533332 instance=ExtResource("5_71j4m")]
 position = Vector2(1945, 128)
 zoom_target = 1.5
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone9" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_rga7q")
+shape = SubResource("RectangleShape2D_eo1xk")
 
 [node name="CameraZone10" parent="Camera Zones" unique_id=1919868481 instance=ExtResource("5_71j4m")]
 position = Vector2(2160, 129)
 zoom_target = 1.5
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone10" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_6oujy")
+shape = SubResource("RectangleShape2D_18clu")
 
 [node name="CameraZone11" parent="Camera Zones" unique_id=368969267 instance=ExtResource("5_71j4m")]
 position = Vector2(2443, 109)
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone11" index="0" unique_id=260718912]
 position = Vector2(-61.5, 0)
-shape = SubResource("RectangleShape2D_eo1xk")
+shape = SubResource("RectangleShape2D_x28ej")
 
 [node name="CameraZone12" parent="Camera Zones" unique_id=1392184364 instance=ExtResource("5_71j4m")]
 position = Vector2(2693, 28)
@@ -425,7 +425,7 @@ wait_time = 10.0
 position = Vector2(1730, 118)
 
 [node name="CollisionShape2D" parent="Systems/PencilRain/SpawnArea" parent_id_path=PackedInt32Array(2133244290, 329061949) index="0" unique_id=570417173]
-shape = SubResource("RectangleShape2D_18clu")
+shape = SubResource("RectangleShape2D_1dgkn")
 
 [node name="Start" parent="Systems/PencilRain" index="2" unique_id=1398177743]
 position = Vector2(-142, 98)
