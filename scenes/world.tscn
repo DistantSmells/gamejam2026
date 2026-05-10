@@ -39,52 +39,53 @@
 [ext_resource type="Texture2D" uid="uid://qfts61c4wxur" path="res://assets/art/window fram.png" id="36_x2olw"]
 [ext_resource type="Texture2D" uid="uid://d2gs7mtabxh8b" path="res://assets/art/Water bottle.png" id="37_817gm"]
 [ext_resource type="Texture2D" uid="uid://cykcpn86fnv10" path="res://assets/art/Outside world.png" id="39_l8ah6"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_817gm"]
-resource_local_to_scene = true
-size = Vector2(124, 100)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ggc52"]
-resource_local_to_scene = true
-size = Vector2(240, 200)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_l8ah6"]
-resource_local_to_scene = true
-size = Vector2(200, 200)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e75v4"]
-resource_local_to_scene = true
-size = Vector2(300, 300)
+[ext_resource type="PackedScene" uid="uid://b0xso3n7hj6k7" path="res://scenes/dialogue_box.tscn" id="40_e75v4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8u370"]
 resource_local_to_scene = true
-size = Vector2(160, 160)
+size = Vector2(124, 100)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rga7q"]
 resource_local_to_scene = true
-size = Vector2(200, 300)
+size = Vector2(240, 200)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6oujy"]
 resource_local_to_scene = true
-size = Vector2(200, 300)
+size = Vector2(200, 200)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eo1xk"]
 resource_local_to_scene = true
-size = Vector2(369, 170)
+size = Vector2(300, 300)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18clu"]
 resource_local_to_scene = true
-size = Vector2(200, 200)
+size = Vector2(160, 160)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x28ej"]
 resource_local_to_scene = true
-size = Vector2(220, 200)
+size = Vector2(200, 300)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1jxku"]
 resource_local_to_scene = true
-size = Vector2(217, 240)
+size = Vector2(200, 300)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1dgkn"]
+resource_local_to_scene = true
+size = Vector2(369, 170)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e68xj"]
+resource_local_to_scene = true
+size = Vector2(200, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pf35h"]
+resource_local_to_scene = true
+size = Vector2(220, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iexy4"]
+resource_local_to_scene = true
+size = Vector2(217, 240)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_npbic"]
 resource_local_to_scene = true
 size = Vector2(400, 400)
 
@@ -121,7 +122,7 @@ size = Vector2(80, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5hglh"]
 size = Vector2(300, 20)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e68xj"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e6ckp"]
 resource_local_to_scene = true
 size = Vector2(160, 10)
 
@@ -147,79 +148,79 @@ position = Vector2(61, 60)
 zoom_target = 2.0
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_817gm")
+shape = SubResource("RectangleShape2D_8u370")
 
 [node name="CameraZone2" parent="Camera Zones" unique_id=420631450 instance=ExtResource("5_71j4m")]
 position = Vector2(248, 14)
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone2" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_ggc52")
+shape = SubResource("RectangleShape2D_rga7q")
 
 [node name="CameraZone3" parent="Camera Zones" unique_id=568418688 instance=ExtResource("5_71j4m")]
 position = Vector2(477, 14)
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone3" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_l8ah6")
+shape = SubResource("RectangleShape2D_6oujy")
 
 [node name="CameraZone4" parent="Camera Zones" unique_id=1516872610 instance=ExtResource("5_71j4m")]
 position = Vector2(737, 64)
 zoom_target = 0.7
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone4" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_e75v4")
+shape = SubResource("RectangleShape2D_eo1xk")
 
 [node name="CameraZone5" parent="Camera Zones" unique_id=143177495 instance=ExtResource("5_71j4m")]
 position = Vector2(970, 32)
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone5" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_8u370")
+shape = SubResource("RectangleShape2D_18clu")
 
 [node name="CameraZone6" parent="Camera Zones" unique_id=718994838 instance=ExtResource("5_71j4m")]
 position = Vector2(1155, 78)
 zoom_target = 0.8
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone6" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_rga7q")
+shape = SubResource("RectangleShape2D_x28ej")
 
 [node name="CameraZone7" parent="Camera Zones" unique_id=1787307846 instance=ExtResource("5_71j4m")]
 position = Vector2(1365, 78)
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone7" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_6oujy")
+shape = SubResource("RectangleShape2D_1jxku")
 
 [node name="CameraZone8" parent="Camera Zones" unique_id=1333763030 instance=ExtResource("5_71j4m")]
 position = Vector2(1654, 143)
 zoom_target = 1.4
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone8" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_eo1xk")
+shape = SubResource("RectangleShape2D_1dgkn")
 
 [node name="CameraZone9" parent="Camera Zones" unique_id=269533332 instance=ExtResource("5_71j4m")]
 position = Vector2(1945, 128)
 zoom_target = 1.5
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone9" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_18clu")
+shape = SubResource("RectangleShape2D_e68xj")
 
 [node name="CameraZone10" parent="Camera Zones" unique_id=1919868481 instance=ExtResource("5_71j4m")]
 position = Vector2(2160, 129)
 zoom_target = 1.5
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone10" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_x28ej")
+shape = SubResource("RectangleShape2D_pf35h")
 
 [node name="CameraZone11" parent="Camera Zones" unique_id=368969267 instance=ExtResource("5_71j4m")]
 position = Vector2(2443, 109)
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone11" index="0" unique_id=260718912]
 position = Vector2(-61.5, 0)
-shape = SubResource("RectangleShape2D_1jxku")
+shape = SubResource("RectangleShape2D_iexy4")
 
 [node name="CameraZone12" parent="Camera Zones" unique_id=1392184364 instance=ExtResource("5_71j4m")]
 position = Vector2(2693, 28)
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone12" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_1dgkn")
+shape = SubResource("RectangleShape2D_npbic")
 
 [node name="Static Props" type="Node2D" parent="." unique_id=174376346]
 
@@ -427,7 +428,7 @@ shape = SubResource("RectangleShape2D_5hglh")
 position = Vector2(1730, 118)
 
 [node name="CollisionShape2D" parent="Systems/PencilRain/SpawnArea" parent_id_path=PackedInt32Array(2133244290, 329061949) index="0" unique_id=570417173]
-shape = SubResource("RectangleShape2D_e68xj")
+shape = SubResource("RectangleShape2D_e6ckp")
 
 [node name="Start" parent="Systems/PencilRain" index="2" unique_id=1398177743]
 position = Vector2(-142, 98)
@@ -580,6 +581,18 @@ z_index = -2
 position = Vector2(2736, 40)
 scale = Vector2(1.6, 1.6)
 texture = ExtResource("39_l8ah6")
+
+[node name="dialogue" type="CanvasLayer" parent="." unique_id=1699136074]
+
+[node name="Dialogue box" parent="dialogue" unique_id=1136646949 instance=ExtResource("40_e75v4")]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+grow_vertical = 0
+size_flags_horizontal = 6
+size_flags_vertical = 6
 
 [connection signal="main_menu_freed" from="Main Menu" to="." method="_on_main_menu_main_menu_freed"]
 [connection signal="died" from="Player" to="." method="_on_player_died"]
