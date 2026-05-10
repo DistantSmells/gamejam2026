@@ -8,6 +8,7 @@ func _ready() -> void:
 func _on_play_pressed() -> void:
 	get_tree().set("paused", false)
 	emit_signal("main_menu_freed")
+	
 	self.queue_free()
 
 
