@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ye2asaksdqtr"
-path="res://.godot/imported/moveable string.png-3be31ac72e8ce6665e418ded947461eb.ctex"
+uid="uid://c2u8mi81du6h7"
+path="res://.godot/imported/blades3.png-a5e5d921c0aae83148da3e8c4e5d6b4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/fan/moveable string.png"
-dest_files=["res://.godot/imported/moveable string.png-3be31ac72e8ce6665e418ded947461eb.ctex"]
+source_file="res://assets/art/Fan/blades3.png"
+dest_files=["res://.godot/imported/blades3.png-a5e5d921c0aae83148da3e8c4e5d6b4a.ctex"]
 
 [params]
 

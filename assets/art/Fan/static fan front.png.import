@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dm5g1by53bjpg"
-path="res://.godot/imported/tray.png-87a9859a2ca9785b7a4b512eeee1ca17.ctex"
+uid="uid://diod7o28kkuer"
+path="res://.godot/imported/static fan front.png-e27f2d0a4e1cdc0afdf56da2785b3a8d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/fan/tray.png"
-dest_files=["res://.godot/imported/tray.png-87a9859a2ca9785b7a4b512eeee1ca17.ctex"]
+source_file="res://assets/art/Fan/static fan front.png"
+dest_files=["res://.godot/imported/static fan front.png-e27f2d0a4e1cdc0afdf56da2785b3a8d.ctex"]
 
 [params]
 

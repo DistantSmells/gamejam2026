@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmsbowhwh2tja"
-path="res://.godot/imported/moveable string.png-f43d96eabb8da1e70069d35ee3e5e554.ctex"
+path="res://.godot/imported/moveable string.png-5665da12c2f99582f5763d47ad909884.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/pulley system/moveable string.png"
-dest_files=["res://.godot/imported/moveable string.png-f43d96eabb8da1e70069d35ee3e5e554.ctex"]
+source_file="res://assets/art/Pulley system/moveable string.png"
+dest_files=["res://.godot/imported/moveable string.png-5665da12c2f99582f5763d47ad909884.ctex"]
 
 [params]
 
