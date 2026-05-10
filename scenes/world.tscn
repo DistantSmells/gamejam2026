@@ -36,6 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://b68ryjhnrohdv" path="res://assets/art/carpet BEHIND.png" id="25_0nbtd"]
 [ext_resource type="Texture2D" uid="uid://djjpkoor3be1c" path="res://assets/art/Handpaint art 3.png" id="31_f17e3"]
 [ext_resource type="Texture2D" uid="uid://qfts61c4wxur" path="res://assets/art/window fram.png" id="36_x2olw"]
+[ext_resource type="Texture2D" uid="uid://d2gs7mtabxh8b" path="res://assets/art/Water bottle.png" id="37_817gm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4kbfs"]
 resource_local_to_scene = true
@@ -128,6 +129,9 @@ size = Vector2(20, 68)
 load_path = "res://.godot/imported/static part.png-e78d9bdf33507cc3cfec2165950df27b.ctex"
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ctatt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e68xj"]
+size = Vector2(27, 80)
 
 [node name="World" type="Node2D" unique_id=724757792]
 script = ExtResource("1_2tsk8")
@@ -547,8 +551,24 @@ collision_mask = 0
 shape = SubResource("WorldBoundaryShape2D_ctatt")
 
 [node name="Player" parent="." unique_id=1553788574 instance=ExtResource("2_rwgxs")]
+<<<<<<< Updated upstream
 position = Vector2(2308, 170)
+=======
+position = Vector2(1446, 82)
+>>>>>>> Stashed changes
 collision_mask = 6
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=912036996]
+position = Vector2(1511, 52)
+collision_layer = 2
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1731412535]
+texture = ExtResource("37_817gm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=624416124]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_e68xj")
 
 [connection signal="main_menu_freed" from="Main Menu" to="." method="_on_main_menu_main_menu_freed"]
 [connection signal="died" from="Player" to="." method="_on_player_died"]
