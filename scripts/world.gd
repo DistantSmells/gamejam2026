@@ -1,6 +1,7 @@
 extends Node2D
 
 var can_pause = false
+var block_input : bool = false
 
 func reload_level() -> void:
 	pass

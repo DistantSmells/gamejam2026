@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ddgsc4edq6rtb" path="res://components/camera_2d.tscn" id="2_tpt06"]
 [ext_resource type="PackedScene" uid="uid://mbbdtwofvb6y" path="res://components/camera_zone.tscn" id="3_16ffl"]
 [ext_resource type="PackedScene" uid="uid://focj2udki44v" path="res://scenes/cage.tscn" id="4_17a3a"]
+[ext_resource type="PackedScene" uid="uid://dkd4vfxlynymh" path="res://components/crank_platform.tscn" id="5_3mq1s"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8uh7m"]
 
@@ -43,5 +44,10 @@ shape = SubResource("RectangleShape2D_b87dp")
 [node name="Cage" parent="." unique_id=2134776975 instance=ExtResource("4_17a3a")]
 position = Vector2(142, 148)
 
+[node name="CrankPlatform" parent="." unique_id=1779107421 instance=ExtResource("5_3mq1s")]
+position = Vector2(395, 168)
+
 [editable path="CameraZone"]
 [editable path="CameraZone2"]
+[editable path="CrankPlatform"]
+[editable path="CrankPlatform/Crank/Path2D/PathFollow2D/Pickable"]
