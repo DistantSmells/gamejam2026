@@ -30,44 +30,45 @@ shader_parameter/number_of_images = Vector2(1, 1)
 [node name="CrankPlatform" type="Node2D" unique_id=1779107421]
 script = ExtResource("1_qrj8o")
 
-[node name="Path2D" type="Path2D" parent="." unique_id=1518270955]
+[node name="platform_path" type="Path2D" parent="." unique_id=1518270955]
 curve = SubResource("Curve2D_lo4mw")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=643655775]
+[node name="PathFollow2D" type="PathFollow2D" parent="platform_path" unique_id=643655775]
 rotates = false
 
-[node name="Platform" type="StaticBody2D" parent="Path2D/PathFollow2D" unique_id=868672828]
+[node name="Platform" type="StaticBody2D" parent="platform_path/PathFollow2D" unique_id=868672828]
 collision_layer = 2
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Platform" unique_id=588167541]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform_path/PathFollow2D/Platform" unique_id=588167541]
 shape = SubResource("RectangleShape2D_lo4mw")
 
-[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D/Platform" unique_id=1889980038]
+[node name="Sprite2D" type="Sprite2D" parent="platform_path/PathFollow2D/Platform" unique_id=1889980038]
 texture = SubResource("CompressedTexture2D_xcx6m")
 offset = Vector2(19, -108)
 
 [node name="Crank" type="Sprite2D" parent="." unique_id=2089513801]
 position = Vector2(-77, -47)
 
-[node name="Path2D" type="Path2D" parent="Crank" unique_id=1999871471]
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Crank/Path2D" unique_id=1596278263]
-rotates = false
-
-[node name="Pickable" parent="Crank/Path2D/PathFollow2D" unique_id=141324948 instance=ExtResource("3_xcx6m")]
-
-[node name="CollisionShape2D" parent="Crank/Path2D/PathFollow2D/Pickable" index="0" unique_id=583126960]
-shape = SubResource("CircleShape2D_xcx6m")
-
-[node name="Handle" type="Sprite2D" parent="Crank/Path2D/PathFollow2D/Pickable" unique_id=1374606022]
-material = SubResource("ShaderMaterial_eu6c5")
-
 [node name="Line2D" type="Line2D" parent="Crank" unique_id=1857967972]
 width = 1.0
 default_color = Color(0.7411765, 0.41568628, 0.34901962, 1)
 
-[connection signal="dropped" from="Crank/Path2D/PathFollow2D/Pickable" to="." method="_on_pickable_dropped"]
-[connection signal="grabbed" from="Crank/Path2D/PathFollow2D/Pickable" to="." method="_on_pickable_grabbed"]
+[node name="crank_path" type="Path2D" parent="." unique_id=1999871471]
+position = Vector2(-77, -47)
 
-[editable path="Crank/Path2D/PathFollow2D/Pickable"]
+[node name="PathFollow2D" type="PathFollow2D" parent="crank_path" unique_id=1596278263]
+rotates = false
+
+[node name="Pickable" parent="crank_path/PathFollow2D" unique_id=141324948 instance=ExtResource("3_xcx6m")]
+
+[node name="CollisionShape2D" parent="crank_path/PathFollow2D/Pickable" index="0" unique_id=583126960]
+shape = SubResource("CircleShape2D_xcx6m")
+
+[node name="Handle" type="Sprite2D" parent="crank_path/PathFollow2D/Pickable" unique_id=1374606022]
+material = SubResource("ShaderMaterial_eu6c5")
+
+[connection signal="dropped" from="crank_path/PathFollow2D/Pickable" to="." method="_on_pickable_dropped"]
+[connection signal="grabbed" from="crank_path/PathFollow2D/Pickable" to="." method="_on_pickable_grabbed"]
+
+[editable path="crank_path/PathFollow2D/Pickable"]
