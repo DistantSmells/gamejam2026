@@ -10,9 +10,9 @@
 
 [sub_resource type="Curve2D" id="Curve2D_japfg"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -20, -139, 0, 0, 0, 0, 68.154236, -141.13063, 0, 0, 0, 0, 104.46863, -147.63817, 0, 0, 0, 0, 133, -158.79395, 0, 0, 0, 0, 158, -173, 0, 0, 0, 0, 176, -208, 0, 0, 0, 0, 165, -237, 0, 0, 0, 0, 148, -257, 0, 0, 0, 0, 120, -271.28137, 0, 0, 0, 0, 51, -275.92963, 0, 0, 0, 0, 5, -275, 0, 0, 0, 0, -44, -275, 0, 0, 0, 0, -77, -277, 0, 0, 0, 0, -126.91217, -268.49243, 0, 0, 0, 0, -148.13696, -258.2663, 0, 0, 0, 0, -168.35114, -246.18088, 0, 0, 0, 0, -171.38324, -206.206, 0, 0, 0, 0, -167.3404, -185.75374, 0, 0, 0, 0, -151.16913, -162.51254, 0, 0, 0, 0, -111.751526, -143.91957, 0, 0, 0, 0, -20.787964, -139.27133)
+"points": PackedVector2Array(0, 0, 0, 0, -20, -139, 0, 0, 0, 0, -5, -142, 0, 0, 0, 0, 15, -145, 0, 0, 0, 0, 27, -146, 0, 0, 0, 0, 41, -146, 0, 0, 0, 0, 54, -144, 0, 0, 0, 0, 76, -141, 0, 0, 0, 0, 88, -143, 0, 0, 0, 0, 104.46863, -147.63817, 0, 0, 0, 0, 120, -153, 0, 0, 0, 0, 133, -158.79395, 0, 0, 0, 0, 147, -165, 0, 0, 0, 0, 158, -173, 0, 0, 0, 0, 177, -189, 0, 0, 0, 0, 190, -205, 0, 0, 0, 0, 198, -216, 0, 0, 0, 0, 205, -225, 0, 0, 0, 0, 217, -242, 0, 0, 0, 0, 224, -252, 0, 0, 0, 0, 232, -260, 0, 0, 0, 0, 243, -271, 0, 0, 0, 0, 257, -279, 0, 0, 0, 0, 270, -287, 0, 0, 0, 0, 290, -300, 0, 0, 0, 0, 202, -345, 0, 0, 0, 0, 103, -330, 0, 0, 0, 0, 57, -317, 0, 0, 0, 0, 9, -312, 0, 0, 0, 0, -35, -309, 0, 0, 0, 0, -83, -306, 0, 0, 0, 0, -115, -302, 0, 0, 0, 0, -148, -315, 0, 0, 0, 0, -236, -303, 0, 0, 0, 0, -213, -288, 0, 0, 0, 0, -195, -279, 0, 0, 0, 0, -178, -272, 0, 0, 0, 0, -166, -263, 0, 0, 0, 0, -160, -246, 0, 0, 0, 0, -156, -231, 0, 0, 0, 0, -150, -215, 0, 0, 0, 0, -141, -198, 0, 0, 0, 0, -132, -185, 0, 0, 0, 0, -118, -169, 0, 0, 0, 0, -98, -157, 0, 0, 0, 0, -80, -149, 0, 0, 0, 0, -20.787964, -139.27133)
 }
-point_count = 21
+point_count = 46
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1rkhb"]
 animations = [{
@@ -39,9 +39,23 @@ curve = SubResource("Curve2D_japfg")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="FlightPath" unique_id=362389763]
 position = Vector2(-20, -139)
-rotation = -0.024164645
+rotation = -0.19739556
 
 [node name="PathData" type="Node2D" parent="FlightPath/PathFollow2D" unique_id=1678476035]
+
+[node name="PathFollow2D2" type="PathFollow2D" parent="FlightPath" unique_id=286809487]
+position = Vector2(-75.846085, -306.4471)
+rotation = 3.0791738
+progress = 751.3895
+
+[node name="PathData" type="Node2D" parent="FlightPath/PathFollow2D2" unique_id=368836205]
+
+[node name="PathFollow2D3" type="PathFollow2D" parent="FlightPath" unique_id=1351903511]
+position = Vector2(257.31342, -316.71472)
+rotation = -2.6688955
+progress = 408.08
+
+[node name="PathData" type="Node2D" parent="FlightPath/PathFollow2D3" unique_id=570299435]
 
 [node name="FanStatic" type="Node2D" parent="." unique_id=1413816353]
 
@@ -62,6 +76,20 @@ texture = ExtResource("4_vqx6f")
 offset = Vector2(-30, -100)
 
 [node name="PaperPlane" parent="." unique_id=1809133464 instance=ExtResource("7_qruo7")]
+position = Vector2(-27.051697, -142.06027)
+rotation = -0.021816796
+scale = Vector2(0.99999994, 0.99999994)
+constant_linear_velocity = Vector2(2.83, 0)
+sync_to_physics = false
+
+[node name="PaperPlane2" parent="." unique_id=1801392069 instance=ExtResource("7_qruo7")]
+position = Vector2(-27.051697, -142.06027)
+rotation = -0.021816796
+scale = Vector2(0.99999994, 0.99999994)
+constant_linear_velocity = Vector2(2.83, 0)
+sync_to_physics = false
+
+[node name="PaperPlane3" parent="." unique_id=1391137678 instance=ExtResource("7_qruo7")]
 position = Vector2(-27.051697, -142.06027)
 rotation = -0.021816796
 scale = Vector2(0.99999994, 0.99999994)

@@ -36,58 +36,61 @@
 [ext_resource type="Texture2D" uid="uid://cw5a5fx742lt8" path="res://assets/art/Pulley system/static part.png" id="24_ggc52"]
 [ext_resource type="Texture2D" uid="uid://b68ryjhnrohdv" path="res://assets/art/carpet BEHIND.png" id="25_0nbtd"]
 [ext_resource type="Texture2D" uid="uid://djjpkoor3be1c" path="res://assets/art/Handpaint art 3.png" id="31_f17e3"]
+[ext_resource type="Texture2D" uid="uid://dama6eqyegwdc" path="res://assets/art/Star chart poster.png" id="34_6oujy"]
 [ext_resource type="Texture2D" uid="uid://qfts61c4wxur" path="res://assets/art/window fram.png" id="36_x2olw"]
 [ext_resource type="Texture2D" uid="uid://d2gs7mtabxh8b" path="res://assets/art/Water bottle.png" id="37_817gm"]
+[ext_resource type="Texture2D" uid="uid://dtjf6qci0o7bx" path="res://assets/art/Blue chair.png" id="37_hi6a0"]
+[ext_resource type="Texture2D" uid="uid://dyk0op7mwnr6f" path="res://assets/art/Green chair.png" id="38_eo1xk"]
 [ext_resource type="Texture2D" uid="uid://cykcpn86fnv10" path="res://assets/art/Outside world.png" id="39_l8ah6"]
 [ext_resource type="PackedScene" uid="uid://b0xso3n7hj6k7" path="res://scenes/dialogue_box.tscn" id="40_e75v4"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8u370"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6oujy"]
 resource_local_to_scene = true
 size = Vector2(124, 100)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rga7q"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eo1xk"]
 resource_local_to_scene = true
 size = Vector2(240, 200)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6oujy"]
-resource_local_to_scene = true
-size = Vector2(200, 200)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_eo1xk"]
-resource_local_to_scene = true
-size = Vector2(300, 300)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18clu"]
 resource_local_to_scene = true
-size = Vector2(160, 160)
+size = Vector2(200, 200)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x28ej"]
 resource_local_to_scene = true
-size = Vector2(200, 300)
+size = Vector2(300, 300)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1jxku"]
 resource_local_to_scene = true
-size = Vector2(200, 300)
+size = Vector2(160, 160)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1dgkn"]
 resource_local_to_scene = true
-size = Vector2(369, 170)
+size = Vector2(200, 300)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e68xj"]
 resource_local_to_scene = true
-size = Vector2(200, 200)
+size = Vector2(251, 300)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pf35h"]
 resource_local_to_scene = true
-size = Vector2(220, 200)
+size = Vector2(369, 170)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iexy4"]
 resource_local_to_scene = true
-size = Vector2(217, 240)
+size = Vector2(200, 200)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_npbic"]
 resource_local_to_scene = true
-size = Vector2(400, 400)
+size = Vector2(220, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e6ckp"]
+resource_local_to_scene = true
+size = Vector2(217, 240)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mvg0v"]
+resource_local_to_scene = true
+size = Vector2(398, 400)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2lf6f"]
 size = Vector2(20, 100)
@@ -122,7 +125,7 @@ size = Vector2(80, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5hglh"]
 size = Vector2(300, 20)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e6ckp"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h3odw"]
 resource_local_to_scene = true
 size = Vector2(160, 10)
 
@@ -148,79 +151,81 @@ position = Vector2(61, 60)
 zoom_target = 2.0
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_8u370")
+shape = SubResource("RectangleShape2D_6oujy")
 
 [node name="CameraZone2" parent="Camera Zones" unique_id=420631450 instance=ExtResource("5_71j4m")]
 position = Vector2(248, 14)
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone2" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_rga7q")
+shape = SubResource("RectangleShape2D_eo1xk")
 
 [node name="CameraZone3" parent="Camera Zones" unique_id=568418688 instance=ExtResource("5_71j4m")]
 position = Vector2(477, 14)
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone3" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_6oujy")
+shape = SubResource("RectangleShape2D_18clu")
 
 [node name="CameraZone4" parent="Camera Zones" unique_id=1516872610 instance=ExtResource("5_71j4m")]
 position = Vector2(737, 64)
 zoom_target = 0.7
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone4" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_eo1xk")
+shape = SubResource("RectangleShape2D_x28ej")
 
 [node name="CameraZone5" parent="Camera Zones" unique_id=143177495 instance=ExtResource("5_71j4m")]
 position = Vector2(970, 32)
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone5" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_18clu")
+shape = SubResource("RectangleShape2D_1jxku")
 
 [node name="CameraZone6" parent="Camera Zones" unique_id=718994838 instance=ExtResource("5_71j4m")]
 position = Vector2(1155, 78)
 zoom_target = 0.8
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone6" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_x28ej")
+shape = SubResource("RectangleShape2D_1dgkn")
 
 [node name="CameraZone7" parent="Camera Zones" unique_id=1787307846 instance=ExtResource("5_71j4m")]
 position = Vector2(1365, 78)
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone7" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_1jxku")
+position = Vector2(25.5, 0)
+shape = SubResource("RectangleShape2D_e68xj")
 
 [node name="CameraZone8" parent="Camera Zones" unique_id=1333763030 instance=ExtResource("5_71j4m")]
-position = Vector2(1654, 143)
+position = Vector2(1710, 143)
 zoom_target = 1.4
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone8" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_1dgkn")
+shape = SubResource("RectangleShape2D_pf35h")
 
 [node name="CameraZone9" parent="Camera Zones" unique_id=269533332 instance=ExtResource("5_71j4m")]
-position = Vector2(1945, 128)
+position = Vector2(2001, 128)
 zoom_target = 1.5
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone9" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_e68xj")
+shape = SubResource("RectangleShape2D_iexy4")
 
 [node name="CameraZone10" parent="Camera Zones" unique_id=1919868481 instance=ExtResource("5_71j4m")]
-position = Vector2(2160, 129)
+position = Vector2(2216, 129)
 zoom_target = 1.5
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone10" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_pf35h")
+shape = SubResource("RectangleShape2D_npbic")
 
 [node name="CameraZone11" parent="Camera Zones" unique_id=368969267 instance=ExtResource("5_71j4m")]
-position = Vector2(2443, 109)
+position = Vector2(2499, 109)
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone11" index="0" unique_id=260718912]
 position = Vector2(-61.5, 0)
-shape = SubResource("RectangleShape2D_iexy4")
+shape = SubResource("RectangleShape2D_e6ckp")
 
 [node name="CameraZone12" parent="Camera Zones" unique_id=1392184364 instance=ExtResource("5_71j4m")]
-position = Vector2(2693, 28)
+position = Vector2(2749, 28)
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone12" index="0" unique_id=260718912]
-shape = SubResource("RectangleShape2D_npbic")
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_mvg0v")
 
 [node name="Static Props" type="Node2D" parent="." unique_id=174376346]
 
@@ -249,16 +254,16 @@ position = Vector2(94, 7)
 shape = SubResource("RectangleShape2D_2lf6f")
 
 [node name="table6" parent="Static Props" unique_id=1921116325 instance=ExtResource("11_q5onr")]
-position = Vector2(1539, 154)
+position = Vector2(1598, 154)
 
 [node name="table7" parent="Static Props" unique_id=129105574 instance=ExtResource("11_q5onr")]
-position = Vector2(1730, 154)
+position = Vector2(1789, 154)
 
 [node name="table8" parent="Static Props" unique_id=325008337 instance=ExtResource("11_q5onr")]
-position = Vector2(2156, 154)
+position = Vector2(2215, 154)
 
 [node name="table9" parent="Static Props" unique_id=451240686 instance=ExtResource("11_q5onr")]
-position = Vector2(2382, 154)
+position = Vector2(2441, 154)
 collision_mask = 0
 
 [node name="CollisionShape2D" parent="Static Props/table9" index="1" unique_id=77206100]
@@ -300,7 +305,7 @@ collision_mask = 0
 polygon = PackedVector2Array(-8.5, -37, 18.5, -29, 22.5, -23, 23.5, -12, 33.5, -2, 41.5, 13, 44.5, 27, 34.5, 43, 12.5, 44, -5.5, 45, -13.5, 44, -24.5, -33, -17.5, -37)
 
 [node name="CrankPlatformBlock" type="StaticBody2D" parent="Static Props" unique_id=1647832657]
-position = Vector2(2265, 50)
+position = Vector2(2324, 50)
 collision_layer = 2
 collision_mask = 2
 
@@ -308,7 +313,7 @@ collision_mask = 2
 shape = SubResource("RectangleShape2D_4wdv8")
 
 [node name="CrankPlatformBlock2" type="StaticBody2D" parent="Static Props" unique_id=50272228]
-position = Vector2(2482, 188)
+position = Vector2(2541, 188)
 collision_layer = 2
 collision_mask = 2
 
@@ -316,7 +321,7 @@ collision_mask = 2
 shape = SubResource("RectangleShape2D_d46x8")
 
 [node name="WindowFrame" type="Sprite2D" parent="Static Props" unique_id=72908857]
-position = Vector2(2513, 50)
+position = Vector2(2572, 50)
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("36_x2olw")
 
@@ -368,15 +373,15 @@ position = Vector2(1188, 132.00003)
 rotation = 1.8325958
 
 [node name="Book2" parent="Dynamic Props" unique_id=207264230 instance=ExtResource("12_munwf")]
-position = Vector2(1627, 210)
+position = Vector2(1686, 210)
 rotation = 1.5707964
 mass = 2.0
 
 [node name="MouseTrap" parent="Dynamic Props" unique_id=983163397 instance=ExtResource("13_37qwj")]
-position = Vector2(2135, 226)
+position = Vector2(2194, 226)
 
 [node name="Pencil" parent="Dynamic Props" unique_id=737304536 instance=ExtResource("14_navra")]
-position = Vector2(2198, 205)
+position = Vector2(2257, 205)
 
 [node name="Hitbox" type="Node2D" parent="." unique_id=2130723426]
 
@@ -417,7 +422,7 @@ position = Vector2(1172, 216)
 shape = SubResource("RectangleShape2D_kpybi")
 
 [node name="Hitbox7" parent="Hitbox" unique_id=2140897783 instance=ExtResource("6_e3hyu")]
-position = Vector2(2683, 223)
+position = Vector2(2742, 223)
 
 [node name="CollisionShape2D" parent="Hitbox/Hitbox7" index="0" unique_id=687741460]
 shape = SubResource("RectangleShape2D_5hglh")
@@ -425,10 +430,10 @@ shape = SubResource("RectangleShape2D_5hglh")
 [node name="Systems" type="Node2D" parent="." unique_id=1965969347]
 
 [node name="PencilRain" parent="Systems" unique_id=2133244290 instance=ExtResource("14_xgqkh")]
-position = Vector2(1730, 118)
+position = Vector2(1789, 118)
 
 [node name="CollisionShape2D" parent="Systems/PencilRain/SpawnArea" parent_id_path=PackedInt32Array(2133244290, 329061949) index="0" unique_id=570417173]
-shape = SubResource("RectangleShape2D_e6ckp")
+shape = SubResource("RectangleShape2D_h3odw")
 
 [node name="Start" parent="Systems/PencilRain" index="2" unique_id=1398177743]
 position = Vector2(-142, 98)
@@ -445,35 +450,37 @@ position = Vector2(0, -22.5)
 shape = SubResource("RectangleShape2D_0nbtd")
 
 [node name="StompyFeet" parent="Systems" unique_id=1513668594 instance=ExtResource("16_ts3gi")]
-position = Vector2(1945, 161)
+position = Vector2(2004, 161)
 
 [node name="CrankStaticArt" type="Sprite2D" parent="Systems" unique_id=2026786158]
-position = Vector2(2355, 114)
+position = Vector2(2414, 114)
 texture = SubResource("CompressedTexture2D_6oujy")
 
 [node name="CrankPlatform" parent="Systems" unique_id=1779107421 instance=ExtResource("19_luhhm")]
-position = Vector2(2355, 114)
+position = Vector2(2414, 114)
 
-[node name="Path2D" parent="Systems/CrankPlatform" index="0" unique_id=1518270955]
+[node name="platform_path" parent="Systems/CrankPlatform" index="0" unique_id=1518270955]
 position = Vector2(-18, 109)
 scale = Vector2(1, 0.9300699)
 
-[node name="Sprite2D" parent="Systems/CrankPlatform/Path2D/PathFollow2D/Platform" parent_id_path=PackedInt32Array(1779107421, 868672828) index="1" unique_id=1889980038]
+[node name="Sprite2D" parent="Systems/CrankPlatform/platform_path/PathFollow2D/Platform" parent_id_path=PackedInt32Array(1779107421, 868672828) index="1" unique_id=1889980038]
 texture = ExtResource("20_fh13f")
 
 [node name="Crank" parent="Systems/CrankPlatform" index="1" unique_id=2089513801]
 position = Vector2(45.999992, 80)
-rotation = 1.5603243
 texture = ExtResource("21_rup4s")
 offset = Vector2(1.425, -4.15)
 
-[node name="Handle" parent="Systems/CrankPlatform/Crank/Path2D/PathFollow2D/Pickable" parent_id_path=PackedInt32Array(1779107421, 141324948) index="1" unique_id=1374606022]
+[node name="Line2D" parent="Systems/CrankPlatform/Crank" index="0" unique_id=1857967972]
+visible = false
+
+[node name="crank_path" parent="Systems/CrankPlatform" index="2" unique_id=1999871471]
+position = Vector2(46, 79)
+
+[node name="Handle" parent="Systems/CrankPlatform/crank_path/PathFollow2D/Pickable" parent_id_path=PackedInt32Array(1779107421, 141324948) index="1" unique_id=1374606022]
 scale = Vector2(1.6, 1.6)
 texture = ExtResource("22_4kbfs")
 offset = Vector2(-13.5, -4.5)
-
-[node name="Line2D" parent="Systems/CrankPlatform/Crank" index="1" unique_id=1857967972]
-visible = false
 
 [node name="StaticPart" type="Sprite2D" parent="Systems/CrankPlatform" unique_id=1461549770]
 z_index = -1
@@ -517,8 +524,16 @@ motion_scale = Vector2(0.8, 0.8)
 position = Vector2(791, -29)
 texture = ExtResource("20_2lf6f")
 
+[node name="MultiplocationTablePoster2" type="Sprite2D" parent="ParallaxBackground/BackWall" unique_id=1122976809]
+position = Vector2(2239, -23)
+texture = ExtResource("20_2lf6f")
+
 [node name="HandpaintArt1" type="Sprite2D" parent="ParallaxBackground/BackWall" unique_id=722489184]
 position = Vector2(259, 29)
+texture = ExtResource("21_7iits")
+
+[node name="HandpaintArt5" type="Sprite2D" parent="ParallaxBackground/BackWall" unique_id=848014411]
+position = Vector2(1183, 19)
 texture = ExtResource("21_7iits")
 
 [node name="HandpaintArt2" type="Sprite2D" parent="ParallaxBackground/BackWall" unique_id=108740905]
@@ -526,11 +541,19 @@ position = Vector2(1133, 45)
 texture = ExtResource("22_oo54l")
 
 [node name="HandpaintArt3" type="Sprite2D" parent="ParallaxBackground/BackWall" unique_id=1795564463]
-position = Vector2(2533, 50)
+position = Vector2(2592, 50)
 texture = ExtResource("31_f17e3")
 
+[node name="HandpaintArt4" type="Sprite2D" parent="ParallaxBackground/BackWall" unique_id=1017547358]
+position = Vector2(1224, -23)
+texture = ExtResource("31_f17e3")
+
+[node name="StarChartPoster" type="Sprite2D" parent="ParallaxBackground/BackWall" unique_id=1069684266]
+position = Vector2(1551, 12)
+texture = ExtResource("34_6oujy")
+
 [node name="Mid" type="ParallaxLayer" parent="ParallaxBackground" unique_id=605703365]
-position = Vector2(331, 48)
+position = Vector2(331, 50)
 motion_mirroring = Vector2(620, 0)
 
 [node name="WallJut" type="Sprite2D" parent="ParallaxBackground/Mid" unique_id=538301564]
@@ -539,6 +562,25 @@ texture = ExtResource("23_ctatt")
 [node name="Carpet behind" type="Sprite2D" parent="ParallaxBackground/Mid" unique_id=1996705459]
 position = Vector2(0, -3)
 texture = ExtResource("25_0nbtd")
+
+[node name="Mid2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1332316626]
+position = Vector2(331, 50)
+
+[node name="BlueChair" type="Sprite2D" parent="ParallaxBackground/Mid2" unique_id=1145812061]
+position = Vector2(46, 85)
+texture = ExtResource("37_hi6a0")
+
+[node name="BlueChair2" type="Sprite2D" parent="ParallaxBackground/Mid2" unique_id=671915758]
+position = Vector2(695, 82)
+texture = ExtResource("37_hi6a0")
+
+[node name="GreenChair" type="Sprite2D" parent="ParallaxBackground/Mid2" unique_id=1183993154]
+position = Vector2(1249, 79)
+texture = ExtResource("38_eo1xk")
+
+[node name="RedChair" type="Sprite2D" parent="ParallaxBackground/Mid2" unique_id=2102041989]
+position = Vector2(1880, 82)
+texture = ExtResource("16_dss4m")
 
 [node name="ParrallaxFront" type="ParallaxBackground" parent="." unique_id=1422332840]
 layer = 1
@@ -561,11 +603,11 @@ collision_mask = 0
 shape = SubResource("WorldBoundaryShape2D_ctatt")
 
 [node name="Player" parent="." unique_id=1553788574 instance=ExtResource("2_rwgxs")]
-position = Vector2(18, 66)
+position = Vector2(2117, 193)
 collision_mask = 6
 
 [node name="bottle block" type="StaticBody2D" parent="." unique_id=749151101]
-position = Vector2(1506, 53)
+position = Vector2(1512, 53)
 collision_layer = 2
 collision_mask = 0
 
@@ -578,7 +620,7 @@ shape = SubResource("RectangleShape2D_qg546")
 
 [node name="OutsideWorld" type="Sprite2D" parent="." unique_id=166139811]
 z_index = -2
-position = Vector2(2736, 40)
+position = Vector2(2795, 40)
 scale = Vector2(1.6, 1.6)
 texture = ExtResource("39_l8ah6")
 
@@ -621,5 +663,5 @@ size_flags_vertical = 6
 [editable path="Systems/PencilRain/Start"]
 [editable path="Systems/PencilRain/Stop"]
 [editable path="Systems/CrankPlatform"]
-[editable path="Systems/CrankPlatform/Crank/Path2D/PathFollow2D/Pickable"]
+[editable path="Systems/CrankPlatform/crank_path/PathFollow2D/Pickable"]
 [editable path="Systems/PaperPlanes"]

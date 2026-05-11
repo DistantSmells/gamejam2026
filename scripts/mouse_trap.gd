@@ -2,6 +2,15 @@ extends AnimatedSprite2D
 
 var triggered : bool = false
 
+func _ready():
+	# Connect the signal to a function
+	self.frame_changed.connect(_on_frame_changed)
+
+func _on_frame_changed():
+	# Check which animation and frame is active
+	if frame == 1:
+		AudioManager.play_sfx("res://assets/sounds/mouse_trap_short.wav", 0.0, 1.1)
+
 func _on_trigger_box_triggered() -> void:
 	if triggered == false:
 		play_snap_effects()
@@ -21,7 +30,3 @@ func _on_physics_detection_body_entered(body: Node2D) -> void:
 func play_snap_effects() -> void:
 	self.play("Snap")
 	triggered = true
-	
-	# Play the mouse trap sound
-	# I recommend a slightly higher pitch (1.2) to make it sound "snappier"
-	AudioManager.play_sfx("res://assets/sounds/mouse_trap.wav", 0.0, 1.2)
