@@ -6,28 +6,40 @@
 [ext_resource type="FontFile" uid="uid://j7fyf61roql4" path="res://assets/fonts/lorekerper/LoreKerper.ttf" id="3_kukqi"]
 [ext_resource type="Texture2D" uid="uid://c2d516rljpds7" path="res://assets/art/menu/guinea pigs pause menun.png" id="4_1s2dm"]
 [ext_resource type="Texture2D" uid="uid://irdtfs0ew8cn" path="res://assets/art/menu/audio icon.png" id="5_knqa7"]
-[ext_resource type="Texture2D" uid="uid://bf5natvttt4gg" path="res://assets/art/menu/dummy slider bar.png" id="6_71k7c"]
-[ext_resource type="Texture2D" uid="uid://2848pvnwbbom" path="res://assets/art/menu/resume button.png" id="6_88e76"]
 [ext_resource type="Texture2D" uid="uid://d0veh6s1dwnq3" path="res://assets/art/menu/quit button.png" id="7_knqa7"]
+[ext_resource type="Texture2D" uid="uid://q1rgqq3nv4oo" path="res://assets/art/resume button.png" id="8_71k7c"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_05uyy"]
 resource_local_to_scene = true
 shader = ExtResource("2_nwcfo")
 shader_parameter/lod = 2.50000011875
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hdmo1"]
-bg_color = Color(0.3054463, 0.3054462, 0.3054462, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-shadow_size = 10
+[sub_resource type="ImageTexture" id="ImageTexture_knqa7"]
 
-[node name="pause_menu" type="CanvasLayer" unique_id=667277355]
+[sub_resource type="ImageTexture" id="ImageTexture_71k7c"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_cmnsq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_71k7c"]
+bg_color = Color(0.3372549, 0.19607843, 0.14117648, 1)
+expand_margin_left = 3.0
+expand_margin_top = 4.0
+expand_margin_right = 2.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cmnsq"]
+bg_color = Color(0.2509804, 0.49019608, 0.5882353, 1)
+expand_margin_left = 1.0
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ofnjo"]
+bg_color = Color(0.2509804, 0.49019608, 0.5882353, 1)
+expand_margin_left = 1.0
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+
+[node name="pause_menu" type="CanvasLayer" unique_id=667277355 groups=["pause_menu"]]
 process_mode = 3
 script = ExtResource("1_hdmo1")
 
@@ -44,79 +56,92 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.101960786, 0.101960786, 0.101960786, 1)
 
-[node name="CenterContainer" type="CenterContainer" parent="." unique_id=307861306]
-anchors_preset = -1
-anchor_left = 0.149
-anchor_top = -0.18100001
-anchor_right = 0.92
-anchor_bottom = 0.81100005
-offset_left = -111.68
-offset_top = -30.419998
-offset_right = 86.600006
-offset_bottom = 77.01999
+[node name="CenterContainer" type="MarginContainer" parent="." unique_id=1901240904]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="CenterContainer" unique_id=1262923447]
+[node name="MarginContainer2" type="MarginContainer" parent="CenterContainer" unique_id=359812364]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_hdmo1")
 
-[node name="background" type="Sprite2D" parent="CenterContainer/PanelContainer" unique_id=1985075989]
-position = Vector2(54.500004, 51)
+[node name="background" type="Sprite2D" parent="CenterContainer/MarginContainer2" unique_id=1985075989]
+position = Vector2(158.5, 88)
 scale = Vector2(0.9260355, 0.94514775)
 texture = ExtResource("3_5d2l8")
 
-[node name="guinea pigs" type="Sprite2D" parent="CenterContainer/PanelContainer" unique_id=1893707887]
+[node name="guinea pigs" type="Sprite2D" parent="CenterContainer/MarginContainer2" unique_id=1893707887]
 z_index = 1
-position = Vector2(53.5, 56)
+position = Vector2(157.5, 93)
 scale = Vector2(0.99999994, 1)
 texture = ExtResource("4_1s2dm")
 
-[node name="audio button" type="Sprite2D" parent="CenterContainer/PanelContainer" unique_id=806796554]
-position = Vector2(60.5, 47)
+[node name="audio button" type="Sprite2D" parent="CenterContainer/MarginContainer2" unique_id=806796554]
+position = Vector2(165.00002, 85)
 scale = Vector2(1.0769231, 1)
 texture = ExtResource("5_knqa7")
 
-[node name="dummy audio bar" type="Sprite2D" parent="CenterContainer/PanelContainer" unique_id=1235144395]
-position = Vector2(56.5, 47)
-texture = ExtResource("6_71k7c")
-
-[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/PanelContainer" unique_id=1820066292]
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer" unique_id=1820066292]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 15
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer" unique_id=755632976]
-layout_mode = 2
+[node name="VBoxContainer" type="Node2D" parent="CenterContainer/MarginContainer" unique_id=1924152619]
 
-[node name="Label" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1624754478]
-layout_mode = 2
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=1624754478]
+visible = false
+offset_right = 88.0
+offset_bottom = 16.0
 theme_override_fonts/font = ExtResource("3_kukqi")
 text = "   Paused    "
 
-[node name="ResumeButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=878469028]
-layout_mode = 2
+[node name="ResumeButton" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=878469028]
+offset_left = -21.0
+offset_top = -11.0
+offset_right = 42.0
+offset_bottom = 13.0
 theme_override_fonts/font = ExtResource("3_kukqi")
 text = "Resume"
 flat = true
 
-[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ResumeButton" unique_id=156549405]
-position = Vector2(41.5, 18)
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/MarginContainer/VBoxContainer/ResumeButton" unique_id=156549405]
+position = Vector2(29, 20)
 scale = Vector2(1.0059172, 1)
-texture = ExtResource("6_88e76")
+texture = ExtResource("8_71k7c")
 
-[node name="QuitButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=612328607]
-layout_mode = 2
+[node name="QuitButton" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=612328607]
+offset_left = -19.0
+offset_top = 22.0
+offset_right = 44.0
+offset_bottom = 46.0
 theme_override_fonts/font = ExtResource("3_kukqi")
 text = "Quit"
 flat = true
 
-[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/QuitButton" unique_id=301949408]
-position = Vector2(41.5, -10)
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/MarginContainer/VBoxContainer/QuitButton" unique_id=301949408]
+position = Vector2(27, -11)
 scale = Vector2(1.0769231, 1)
 texture = ExtResource("7_knqa7")
 
-[connection signal="pressed" from="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
-[connection signal="pressed" from="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[node name="HSlider" type="HSlider" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=528269244]
+offset_left = -24.0
+offset_top = 51.0
+offset_right = 52.0
+offset_bottom = 67.0
+size_flags_vertical = 8
+theme_override_icons/grabber = SubResource("ImageTexture_knqa7")
+theme_override_icons/grabber_highlight = SubResource("ImageTexture_71k7c")
+theme_override_icons/grabber_disabled = SubResource("ImageTexture_cmnsq")
+theme_override_styles/slider = SubResource("StyleBoxFlat_71k7c")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_cmnsq")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_ofnjo")
+value = 75.0
+
+[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="drag_ended" from="CenterContainer/MarginContainer/VBoxContainer/HSlider" to="." method="_on_h_slider_drag_ended"]
+[connection signal="value_changed" from="CenterContainer/MarginContainer/VBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]

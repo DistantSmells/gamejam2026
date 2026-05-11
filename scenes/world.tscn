@@ -148,7 +148,7 @@ script = ExtResource("1_2tsk8")
 
 [node name="CameraZone" parent="Camera Zones" unique_id=1477006201 instance=ExtResource("5_71j4m")]
 position = Vector2(61, 60)
-zoom_target = 2.0
+zoom_target = 1.9
 
 [node name="CollisionShape2D" parent="Camera Zones/CameraZone" index="0" unique_id=260718912]
 shape = SubResource("RectangleShape2D_6oujy")
@@ -603,7 +603,7 @@ collision_mask = 0
 shape = SubResource("WorldBoundaryShape2D_ctatt")
 
 [node name="Player" parent="." unique_id=1553788574 instance=ExtResource("2_rwgxs")]
-position = Vector2(2117, 193)
+position = Vector2(36, 51)
 collision_mask = 6
 
 [node name="bottle block" type="StaticBody2D" parent="." unique_id=749151101]
